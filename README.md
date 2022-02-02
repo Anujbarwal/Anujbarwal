@@ -1,16 +1,20 @@
-### Hi there 👋
+AnujBarwal
+- 🔭 I’m currently working on Realme XT (RMX1921)
+- 🌱 I’m currently learning ... Android development 
 
-<!--
-**Anujbarwal/Anujbarwal** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Anujbarwal)](https://github.com/anuraghazra/github-readme-stats)
 
-Here are some ideas to get you started:
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Anujbarwal&hide=contribs,prs)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Anujbarwal&show_icons=true&theme=radical)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Anujbarwal)](https://github.com/anuraghazra/github-readme-stats)
+
+![HitCount](https://komarev.com/ghpvc/?username=Anujbarwal&style=round&color=8712ff&label=PROFILE+VIEWS)
+
+## Little Info About Me
+Just Started 
+## Can I contact you?
+Yes Why Not! Contact Me On Gmail:- anujbarwal2000@gmail.com
+## What's your project now?
+Working On Development For XT
