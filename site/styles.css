@@ -77,14 +77,12 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   text-decoration: none;
 }
 .wordmark-mark {
-  color: var(--text);
-  font-family: var(--display);
-  font-size: 27px;
-  font-weight: 800;
-  letter-spacing: -.09em;
-  line-height: 1;
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 10px;
 }
-.wordmark-mark span { color: var(--mint); }
 .site-header nav { display: flex; align-items: center; gap: clamp(16px, 3vw, 36px); }
 .site-header nav a {
   color: var(--muted);
@@ -354,7 +352,7 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
 .closing-section > div:last-child > p:not(.eyebrow) { max-width: 500px; margin-bottom: 18px; color: var(--muted); font-size: 12px; }
 .site-footer { display: flex; min-height: 83px; align-items: center; justify-content: space-between; gap: 15px; border-top: 1px solid var(--line); }
 .footer-mark { font-size: 8px; }
-.footer-mark .wordmark-mark { font-size: 22px; }
+.footer-mark .wordmark-mark { width: 28px; height: 28px; border-radius: 8px; }
 .site-footer > p { margin: 0; color: var(--subtle); font-size: 10px; }
 .site-footer p a { color: var(--muted); text-decoration: none; }
 .local-clock { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 9px !important; }
@@ -382,7 +380,7 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
   .section-wrap { width: min(100% - 34px, 520px); }
   .site-header { min-height: 63px; padding-inline: 17px; }
   .wordmark { gap: 7px; font-size: 8px; }
-  .wordmark-mark { font-size: 23px; }
+  .wordmark-mark { width: 30px; height: 30px; }
   .site-header nav { gap: 12px; }
   .site-header nav a { font-size: 10px; }
   .site-header nav a:nth-child(2), .site-header nav a:nth-child(3) { display: none; }
