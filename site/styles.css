@@ -137,7 +137,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .hero-copy.is-changing #hero-kicker,
 .hero-copy.is-changing #hero-title-first,
 .hero-copy.is-changing #hero-title-second,
-.hero-copy.is-changing .hero-lede { animation: hero-copy-arrive .35s ease both; }
+.hero-copy.is-changing .hero-lede { animation: hero-copy-arrive .75s cubic-bezier(.2, .8, .2, 1) both; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; }
 .button {
   display: inline-flex;
@@ -256,8 +256,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .quote-index { flex: 0 0 auto; margin-right: 3px; color: var(--blue); }
 .quote-mark { color: var(--mint); }
 .float-card-code #hero-coding-quote { color: var(--text); }
-.hero-art.is-changing .float-card-code { animation: quote-arrive .35s ease both; }
-.hero-art.is-changing .emoji-face { animation: coder-arrive .35s cubic-bezier(.2, .8, .2, 1) both; }
+.hero-art.is-changing .float-card-code { animation: quote-arrive .75s cubic-bezier(.2, .8, .2, 1) both; }
+.hero-art.is-changing .emoji-face { animation: coder-arrive .75s cubic-bezier(.2, .8, .2, 1) both; }
 .hero-art[data-scene="1"] .art-glow { filter: hue-rotate(45deg) blur(8px); }
 .hero-art[data-scene="2"] .art-glow { filter: hue-rotate(120deg) blur(8px); }
 .cursor { color: var(--mint); animation: blink .9s steps(2, start) infinite; }
@@ -417,7 +417,7 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
 @keyframes sparkle { 0%, 100% { opacity: .38; transform: scale(.8) rotate(0); } 50% { opacity: 1; transform: scale(1.15) rotate(25deg); } }
 @keyframes quote-arrive { 0% { opacity: .3; transform: translateY(7px) rotate(-5deg); } 100% { opacity: 1; transform: translateY(0) rotate(-5deg); } }
 @keyframes coder-arrive { 0% { opacity: .35; transform: translateZ(30px) rotate(-22deg) scale(.72); } 100% { opacity: 1; transform: translateZ(30px) rotate(-8deg) scale(1); } }
-@keyframes hero-copy-arrive { 0% { opacity: .45; transform: translateY(5px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes hero-copy-arrive { 0% { opacity: .35; transform: translateY(12px) scale(.985); filter: blur(3px); } 60% { opacity: 1; filter: blur(0); } 100% { transform: translateY(0) scale(1); } }
 @keyframes blink { to { visibility: hidden; } }
 @keyframes rocket-hover { 0%, 100% { transform: translateY(0) rotate(-7deg); } 50% { transform: translateY(-11px) rotate(2deg); } }
 

@@ -292,7 +292,7 @@ heroArt.addEventListener("pointerleave", () => {
   emojiScene.style.setProperty("--pointer-y", "0deg");
 });
 
-window.setInterval(showNextCodingScene, 1_000);
+window.setInterval(showNextCodingScene, 5_000);
 updateProgress();
 filterProjects();
 updateLocalTime();
