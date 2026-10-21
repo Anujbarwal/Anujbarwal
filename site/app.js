@@ -1,4 +1,5 @@
 const storageKey = "anuj-roadmap-progress-v1";
+const courseDeadlineKey = "anuj-roadmap-course-deadline-v1";
 const milestoneInputs = [...document.querySelectorAll("[data-milestone]")];
 const projectInputs = [...document.querySelectorAll("[data-project]")];
 const roadmapCards = [...document.querySelectorAll(".roadmap-card")];
@@ -103,6 +104,69 @@ function updateLocalTime() {
   clock.textContent = `Your local time · ${time}`;
 }
 
+function createCourseDeadline(startDate) {
+  const deadline = new Date(startDate);
+  const dayOfMonth = deadline.getDate();
+  deadline.setDate(1);
+  deadline.setMonth(deadline.getMonth() + 18);
+  const lastDayOfMonth = new Date(deadline.getFullYear(), deadline.getMonth() + 1, 0).getDate();
+  deadline.setDate(Math.min(dayOfMonth, lastDayOfMonth));
+  return deadline;
+}
+
+let courseDeadlineIsPersisted = true;
+
+function getCourseDeadline() {
+  try {
+    const savedDeadline = localStorage.getItem(courseDeadlineKey);
+    if (savedDeadline) {
+      const parsedDeadline = new Date(savedDeadline);
+      if (Number.isFinite(parsedDeadline.getTime())) return parsedDeadline;
+    }
+
+    const deadline = createCourseDeadline(new Date());
+    localStorage.setItem(courseDeadlineKey, deadline.toISOString());
+    return deadline;
+  } catch {
+    courseDeadlineIsPersisted = false;
+    return createCourseDeadline(new Date());
+  }
+}
+
+const courseDeadline = getCourseDeadline();
+const countdownParts = {
+  days: document.querySelector("#course-days"),
+  hours: document.querySelector("#course-hours"),
+  minutes: document.querySelector("#course-minutes"),
+  seconds: document.querySelector("#course-seconds"),
+};
+const courseDeadlineLabel = document.querySelector("#course-timer-deadline");
+courseDeadlineLabel.textContent =
+  `Your 18-month target · ${new Intl.DateTimeFormat(undefined, { dateStyle: "long" }).format(courseDeadline)}` +
+  (courseDeadlineIsPersisted ? " · saved in this browser" : " · browser storage unavailable; timer lasts for this visit");
+const clockHands = {
+  hour: document.querySelector(".clock-hour"),
+  minute: document.querySelector(".clock-minute"),
+  second: document.querySelector(".clock-second"),
+};
+
+function updateCourseCountdown() {
+  const now = new Date();
+  const remainingSeconds = Math.max(0, Math.floor((courseDeadline.getTime() - now.getTime()) / 1_000));
+  const days = Math.floor(remainingSeconds / 86_400);
+  const hours = Math.floor((remainingSeconds % 86_400) / 3_600);
+  const minutes = Math.floor((remainingSeconds % 3_600) / 60);
+  const seconds = remainingSeconds % 60;
+
+  clockHands.hour.style.transform = `rotate(${(now.getHours() % 12) * 30 + now.getMinutes() * 0.5}deg)`;
+  clockHands.minute.style.transform = `rotate(${now.getMinutes() * 6 + now.getSeconds() * 0.1}deg)`;
+  clockHands.second.style.transform = `rotate(${now.getSeconds() * 6}deg)`;
+  countdownParts.days.textContent = String(days);
+  countdownParts.hours.textContent = String(hours).padStart(2, "0");
+  countdownParts.minutes.textContent = String(minutes).padStart(2, "0");
+  countdownParts.seconds.textContent = String(seconds).padStart(2, "0");
+}
+
 const savedProgress = readProgress();
 milestoneInputs.forEach((input) => {
   input.checked = savedProgress.milestones.includes(input.dataset.milestone);
@@ -161,4 +225,6 @@ heroArt.addEventListener("pointerleave", () => {
 updateProgress();
 filterProjects();
 updateLocalTime();
+updateCourseCountdown();
 window.setInterval(updateLocalTime, 1_000);
+window.setInterval(updateCourseCountdown, 1_000);

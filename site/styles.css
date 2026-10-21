@@ -359,7 +359,59 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
 .local-clock .status-dot { width: 6px; height: 6px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
 
+.course-timer-section {
+  position: relative;
+  display: grid;
+  min-height: 300px;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .9fr);
+  align-items: center;
+  gap: 35px;
+  margin-top: 64px;
+  padding: 34px clamp(24px, 5vw, 64px);
+  overflow: hidden;
+  border: 1px solid rgba(131, 240, 215, .16);
+  border-radius: 16px;
+  background: radial-gradient(ellipse at 78% 50%, rgba(49, 104, 135, .22), transparent 50%), linear-gradient(135deg, #101d30, #0b1424 68%);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .22), inset 0 1px rgba(255, 255, 255, .04);
+}
+.course-timer-copy { position: relative; z-index: 1; max-width: 470px; }
+.course-timer-copy .eyebrow { display: flex; align-items: center; gap: 9px; }
+.course-timer-copy .status-dot { width: 7px; height: 7px; }
+.course-timer-copy h2 { margin: 13px 0 12px; font-size: clamp(29px, 3.5vw, 42px); }
+.course-timer-copy > p:not(.eyebrow) { max-width: 430px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.course-timer-copy .course-timer-deadline { margin-top: 17px !important; color: var(--mint) !important; font-family: var(--mono); font-size: 10px !important; }
+.course-clock-scene { display: grid; justify-items: center; gap: 22px; perspective: 700px; }
+.course-clock {
+  position: relative;
+  width: 158px;
+  height: 158px;
+  border: 1px solid rgba(194, 230, 255, .55);
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 23%, #395574, #1d304b 52%, #101b2e 76%);
+  box-shadow: 0 17px 25px rgba(0, 0, 0, .45), 0 0 36px rgba(87, 201, 210, .17), inset 0 3px 8px rgba(239, 255, 255, .3), inset 0 -10px 16px rgba(3, 8, 18, .6);
+  transform: rotateX(12deg) rotateY(-13deg);
+  animation: course-clock-float 5s ease-in-out infinite;
+}
+.course-clock::before, .course-clock::after { position: absolute; content: ""; border-radius: 50%; pointer-events: none; }
+.course-clock::before { inset: 8px; border: 1px solid rgba(198, 239, 255, .25); box-shadow: inset 0 1px rgba(255, 255, 255, .16); }
+.course-clock::after { inset: -10px; border: 1px solid rgba(131, 240, 215, .12); transform: translateZ(-9px); }
+.course-clock-ring { position: absolute; inset: 16px; border: 1px solid rgba(131, 240, 215, .2); border-radius: 50%; }
+.clock-tick { position: absolute; z-index: 1; display: block; width: 3px; height: 8px; border-radius: 3px; background: #bffaf0; box-shadow: 0 0 8px rgba(131, 240, 215, .5); }
+.tick-12 { top: 19px; left: calc(50% - 1.5px); }
+.tick-3 { top: calc(50% - 4px); right: 19px; transform: rotate(90deg); }
+.tick-6 { bottom: 19px; left: calc(50% - 1.5px); }
+.tick-9 { top: calc(50% - 4px); left: 19px; transform: rotate(90deg); }
+.clock-hand { position: absolute; z-index: 2; bottom: 50%; left: calc(50% - 1px); display: block; width: 2px; border-radius: 3px; background: #f0fffc; transform-origin: center bottom; }
+.clock-hour { height: 37px; transform: rotate(38deg); }
+.clock-minute { height: 51px; background: #83f0d7; transform: rotate(215deg); }
+.clock-second { height: 57px; width: 1px; background: #ffbf91; transform: rotate(0deg); }
+.clock-pin { position: absolute; z-index: 3; top: calc(50% - 4px); left: calc(50% - 4px); width: 8px; height: 8px; border: 2px solid #edfffb; border-radius: 50%; background: #83f0d7; }
+.countdown-display { display: grid; grid-template-columns: repeat(4, minmax(60px, 1fr)); gap: 9px; width: min(100%, 380px); }
+.countdown-display > div { display: grid; min-height: 60px; align-content: center; justify-items: center; gap: 4px; border: 1px solid rgba(161, 193, 225, .16); border-radius: 8px; background: linear-gradient(160deg, rgba(39, 60, 85, .72), rgba(13, 24, 41, .9)); box-shadow: 0 7px 12px rgba(0, 0, 0, .22), inset 0 1px rgba(255, 255, 255, .08); }
+.countdown-display strong { color: #eff8ff; font-family: var(--mono); font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; text-shadow: 0 0 16px rgba(131, 240, 215, .2); }
+.countdown-display span { color: var(--subtle); font-family: var(--mono); font-size: 8px; text-transform: uppercase; letter-spacing: .08em; }
 @keyframes emoji-float { 0%, 100% { transform: translateY(0) translateZ(20px) rotate(-3deg); } 50% { transform: translateY(-12px) translateZ(35px) rotate(3deg); } }
+@keyframes course-clock-float { 0%, 100% { transform: rotateX(12deg) rotateY(-13deg) translateY(0); } 50% { transform: rotateX(12deg) rotateY(-13deg) translateY(-7px); } }
 @keyframes shadow-breathe { 0%, 100% { transform: translateZ(-30px) scaleX(1); opacity: .8; } 50% { transform: translateZ(-30px) scaleX(.8); opacity: .5; } }
 @keyframes glow-breathe { from { opacity: .65; transform: scale(.92); } to { opacity: 1; transform: scale(1.08); } }
 @keyframes orbit-pulse { 0%, 100% { opacity: .45; } 50% { opacity: .95; } }
@@ -374,6 +426,9 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .roadmap-card { grid-template-columns: 38px minmax(0, 1fr) 105px; gap: 11px; padding: 18px; }
   .method-section { grid-template-columns: 1fr 1.2fr; }
+  .course-timer-section { grid-template-columns: minmax(0, 1fr) minmax(300px, .9fr); gap: 20px; padding-inline: 28px; }
+  .countdown-display { gap: 6px; }
+  .countdown-display > div { min-height: 54px; }
 }
 @media (max-width: 620px) {
   html { scroll-padding-top: 70px; }
@@ -397,6 +452,15 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
   .float-card-ship { right: 2%; bottom: 54px; }
   .hero-scroll { display: none; }
   .stats { grid-template-columns: repeat(2, 1fr); row-gap: 16px; padding-block: 18px; }
+  .course-timer-section { grid-template-columns: 1fr; gap: 25px; margin-top: 42px; padding: 26px 20px; }
+  .course-timer-copy h2 { font-size: 30px; }
+  .course-clock { width: 138px; height: 138px; }
+  .clock-hour { height: 32px; }
+  .clock-minute { height: 44px; }
+  .clock-second { height: 50px; }
+  .countdown-display { width: 100%; }
+  .countdown-display > div { min-width: 0; }
+  .countdown-display strong { font-size: 18px; }
   .stat { padding: 0 12px; }
   .stat:nth-child(2) { border: 0; }
   .stat:nth-child(3) { padding-left: 0; }
@@ -439,6 +503,8 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
   .site-footer { flex-wrap: wrap; justify-content: space-between; padding-block: 17px; }
   .site-footer > p:nth-child(2) { order: 3; width: 100%; }
 }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .course-clock { transform: none; }
 }
