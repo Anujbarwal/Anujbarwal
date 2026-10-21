@@ -91,8 +91,16 @@ function filterProjects() {
 }
 
 function updateLocalTime() {
-  const time = new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit" }).format(new Date());
-  document.querySelector("#local-time").textContent = `Your local time · ${time}`;
+  const now = new Date();
+  const time = new Intl.DateTimeFormat(undefined, {
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    timeZoneName: "short",
+  }).format(now);
+  const clock = document.querySelector("#local-time");
+  clock.dateTime = now.toISOString();
+  clock.textContent = `Your local time · ${time}`;
 }
 
 const savedProgress = readProgress();
@@ -153,4 +161,4 @@ heroArt.addEventListener("pointerleave", () => {
 updateProgress();
 filterProjects();
 updateLocalTime();
-window.setInterval(updateLocalTime, 60_000);
+window.setInterval(updateLocalTime, 1_000);
