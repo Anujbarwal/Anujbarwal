@@ -374,44 +374,40 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
   background: radial-gradient(ellipse at 78% 50%, rgba(49, 104, 135, .22), transparent 50%), linear-gradient(135deg, #101d30, #0b1424 68%);
   box-shadow: 0 24px 70px rgba(0, 0, 0, .22), inset 0 1px rgba(255, 255, 255, .04);
 }
+.course-timer-section > * { min-width: 0; }
 .course-timer-copy { position: relative; z-index: 1; max-width: 470px; }
 .course-timer-copy .eyebrow { display: flex; align-items: center; gap: 9px; }
 .course-timer-copy .status-dot { width: 7px; height: 7px; }
 .course-timer-copy h2 { margin: 13px 0 12px; font-size: clamp(29px, 3.5vw, 42px); }
 .course-timer-copy > p:not(.eyebrow) { max-width: 430px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .course-timer-copy .course-timer-deadline { margin-top: 17px !important; color: var(--mint) !important; font-family: var(--mono); font-size: 10px !important; }
-.course-clock-scene { display: grid; justify-items: center; gap: 22px; perspective: 700px; }
-.course-clock {
-  position: relative;
-  width: 158px;
-  height: 158px;
-  border: 1px solid rgba(194, 230, 255, .55);
-  border-radius: 50%;
-  background: radial-gradient(circle at 32% 23%, #395574, #1d304b 52%, #101b2e 76%);
-  box-shadow: 0 17px 25px rgba(0, 0, 0, .45), 0 0 36px rgba(87, 201, 210, .17), inset 0 3px 8px rgba(239, 255, 255, .3), inset 0 -10px 16px rgba(3, 8, 18, .6);
-  transform: rotateX(12deg) rotateY(-13deg);
-  animation: course-clock-float 5s ease-in-out infinite;
-}
-.course-clock::before, .course-clock::after { position: absolute; content: ""; border-radius: 50%; pointer-events: none; }
-.course-clock::before { inset: 8px; border: 1px solid rgba(198, 239, 255, .25); box-shadow: inset 0 1px rgba(255, 255, 255, .16); }
-.course-clock::after { inset: -10px; border: 1px solid rgba(131, 240, 215, .12); transform: translateZ(-9px); }
-.course-clock-ring { position: absolute; inset: 16px; border: 1px solid rgba(131, 240, 215, .2); border-radius: 50%; }
-.clock-tick { position: absolute; z-index: 1; display: block; width: 3px; height: 8px; border-radius: 3px; background: #bffaf0; box-shadow: 0 0 8px rgba(131, 240, 215, .5); }
-.tick-12 { top: 19px; left: calc(50% - 1.5px); }
-.tick-3 { top: calc(50% - 4px); right: 19px; transform: rotate(90deg); }
-.tick-6 { bottom: 19px; left: calc(50% - 1.5px); }
-.tick-9 { top: calc(50% - 4px); left: 19px; transform: rotate(90deg); }
-.clock-hand { position: absolute; z-index: 2; bottom: 50%; left: calc(50% - 1px); display: block; width: 2px; border-radius: 3px; background: #f0fffc; transform-origin: center bottom; }
-.clock-hour { height: 37px; transform: rotate(38deg); }
-.clock-minute { height: 51px; background: #83f0d7; transform: rotate(215deg); }
-.clock-second { height: 57px; width: 1px; background: #ffbf91; transform: rotate(0deg); }
-.clock-pin { position: absolute; z-index: 3; top: calc(50% - 4px); left: calc(50% - 4px); width: 8px; height: 8px; border: 2px solid #edfffb; border-radius: 50%; background: #83f0d7; }
-.countdown-display { display: grid; grid-template-columns: repeat(4, minmax(60px, 1fr)); gap: 9px; width: min(100%, 380px); }
-.countdown-display > div { display: grid; min-height: 60px; align-content: center; justify-items: center; gap: 4px; border: 1px solid rgba(161, 193, 225, .16); border-radius: 8px; background: linear-gradient(160deg, rgba(39, 60, 85, .72), rgba(13, 24, 41, .9)); box-shadow: 0 7px 12px rgba(0, 0, 0, .22), inset 0 1px rgba(255, 255, 255, .08); }
-.countdown-display strong { color: #eff8ff; font-family: var(--mono); font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; text-shadow: 0 0 16px rgba(131, 240, 215, .2); }
-.countdown-display span { color: var(--subtle); font-family: var(--mono); font-size: 8px; text-transform: uppercase; letter-spacing: .08em; }
+.course-watch-scene { display: grid; width: 100%; min-width: 0; justify-items: center; perspective: 900px; }
+.course-watch { position: relative; display: grid; width: min(100%, 340px); min-height: 284px; align-content: center; justify-items: center; }
+.watch-band { position: absolute; left: calc(50% - 45px); display: block; width: 90px; height: 118px; border: 1px solid rgba(185, 216, 240, .32); background: repeating-linear-gradient(0deg, transparent 0 13px, rgba(204, 231, 255, .12) 13px 15px), linear-gradient(100deg, #172a41, #3b5874 48%, #1c3048); box-shadow: inset 3px 0 7px rgba(255, 255, 255, .08), inset -4px 0 8px rgba(0, 0, 0, .28); }
+.watch-band::after { position: absolute; left: calc(50% - 4px); width: 8px; height: 5px; border: 1px solid rgba(211, 237, 255, .48); border-radius: 50%; content: ""; }
+.watch-band-top { top: 0; border-radius: 24px 24px 10px 10px; }
+.watch-band-top::after { bottom: 9px; }
+.watch-band-bottom { bottom: 0; border-radius: 10px 10px 24px 24px; }
+.watch-band-bottom::after { top: 9px; }
+.watch-case { position: relative; z-index: 1; width: min(100%, 326px); padding: 10px; border: 1px solid #7891a9; border-radius: 37px; background: linear-gradient(135deg, #8298ad, #30435a 17%, #17263b 52%, #0b1525 78%, #617a91); box-shadow: 0 21px 27px rgba(0, 0, 0, .46), 0 0 38px rgba(87, 201, 210, .2), inset 0 2px 3px rgba(240, 250, 255, .5), inset 0 -4px 7px rgba(0, 0, 0, .5); transform: rotateX(11deg) rotateY(-9deg); animation: course-watch-float 5s ease-in-out infinite; }
+.watch-case::after { position: absolute; top: 47px; right: -5px; width: 5px; height: 36px; border: 1px solid #8297a9; border-radius: 0 4px 4px 0; background: linear-gradient(90deg, #657c92, #192940); content: ""; }
+.watch-screen { display: grid; gap: 12px; min-height: 181px; padding: 15px 17px 14px; overflow: hidden; border: 1px solid rgba(164, 237, 224, .32); border-radius: 28px; background: radial-gradient(ellipse at 50% -10%, rgba(63, 130, 141, .28), transparent 68%), linear-gradient(145deg, #0b1825, #07111c 70%); box-shadow: inset 0 2px 10px rgba(0, 0, 0, .8), inset 0 0 16px rgba(80, 183, 180, .08); }
+.watch-screen-heading { display: flex; align-items: center; justify-content: space-between; color: #93aabd; font-family: var(--mono); font-size: 8px; letter-spacing: .11em; }
+.watch-screen-heading > span:first-child { display: flex; align-items: center; gap: 6px; }
+.watch-screen-heading > span:last-child { color: var(--mint); }
+.watch-live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 9px rgba(131, 240, 215, .85); animation: watch-live-pulse 1.8s ease-in-out infinite; }
+.watch-code { display: grid; gap: 3px; color: #c4d2df; font-family: var(--mono); font-size: clamp(9px, 1vw, 11px); line-height: 1.45; white-space: nowrap; }
+.watch-code-line { padding-left: 14px; }
+.watch-code strong { color: #f1f7ff; font-weight: 500; font-variant-numeric: tabular-nums; text-shadow: 0 0 12px rgba(131, 240, 215, .28); }
+.code-keyword { color: #c792ea; }
+.code-variable { color: #82aaff; }
+.code-property { color: #89ddff; }
+.code-brace { color: #ffcb6b; }
+.code-comment { color: #6f889e; }
+.code-cursor { color: var(--mint); animation: blink .9s steps(2, start) infinite; }
 @keyframes emoji-float { 0%, 100% { transform: translateY(0) translateZ(20px) rotate(-3deg); } 50% { transform: translateY(-12px) translateZ(35px) rotate(3deg); } }
-@keyframes course-clock-float { 0%, 100% { transform: rotateX(12deg) rotateY(-13deg) translateY(0); } 50% { transform: rotateX(12deg) rotateY(-13deg) translateY(-7px); } }
+@keyframes course-watch-float { 0%, 100% { transform: rotateX(11deg) rotateY(-9deg) translateY(0); } 50% { transform: rotateX(11deg) rotateY(-9deg) translateY(-6px); } }
+@keyframes watch-live-pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
 @keyframes shadow-breathe { 0%, 100% { transform: translateZ(-30px) scaleX(1); opacity: .8; } 50% { transform: translateZ(-30px) scaleX(.8); opacity: .5; } }
 @keyframes glow-breathe { from { opacity: .65; transform: scale(.92); } to { opacity: 1; transform: scale(1.08); } }
 @keyframes orbit-pulse { 0%, 100% { opacity: .45; } 50% { opacity: .95; } }
@@ -426,9 +422,11 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .roadmap-card { grid-template-columns: 38px minmax(0, 1fr) 105px; gap: 11px; padding: 18px; }
   .method-section { grid-template-columns: 1fr 1.2fr; }
-  .course-timer-section { grid-template-columns: minmax(0, 1fr) minmax(300px, .9fr); gap: 20px; padding-inline: 28px; }
-  .countdown-display { gap: 6px; }
-  .countdown-display > div { min-height: 54px; }
+  .course-timer-section { grid-template-columns: minmax(0, 1fr) minmax(270px, .9fr); gap: 20px; padding-inline: 28px; }
+  .course-watch { min-height: 270px; }
+  .watch-case { width: min(100%, 300px); }
+  .watch-screen { min-height: 174px; padding-inline: 14px; }
+  .watch-code { font-size: 10px; }
 }
 @media (max-width: 620px) {
   html { scroll-padding-top: 70px; }
@@ -454,13 +452,10 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
   .stats { grid-template-columns: repeat(2, 1fr); row-gap: 16px; padding-block: 18px; }
   .course-timer-section { grid-template-columns: 1fr; gap: 25px; margin-top: 42px; padding: 26px 20px; }
   .course-timer-copy h2 { font-size: 30px; }
-  .course-clock { width: 138px; height: 138px; }
-  .clock-hour { height: 32px; }
-  .clock-minute { height: 44px; }
-  .clock-second { height: 50px; }
-  .countdown-display { width: 100%; }
-  .countdown-display > div { min-width: 0; }
-  .countdown-display strong { font-size: 18px; }
+  .course-watch { min-height: 270px; }
+  .watch-case { width: min(100%, 320px); }
+  .watch-screen { min-height: 174px; }
+  .watch-code { font-size: 9px; }
   .stat { padding: 0 12px; }
   .stat:nth-child(2) { border: 0; }
   .stat:nth-child(3) { padding-left: 0; }
@@ -506,5 +501,6 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  .course-clock { transform: none; }
+  .watch-case { animation: none; transform: none; }
+  .watch-live-dot { animation: none; }
 }
