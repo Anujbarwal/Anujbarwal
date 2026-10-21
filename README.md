@@ -65,21 +65,26 @@
 
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="30" height="30" /> Live GitHub & Code Review Telemetry
 
-<!-- RELIABLE LIVE STATS CARDS (STREAK + SUMMARY CARDS) -->
+<!-- These badges read public GitHub API endpoints; Shields.io caches responses briefly. -->
 <div align="center">
-  <a href="https://github.com/Anujbarwal">
-    <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=Anujbarwal&theme=tokyonight&hide_border=true&border_radius=10" alt="Anujbarwal Streak" />
+  <a href="https://github.com/Anujbarwal?tab=repositories">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FAnujbarwal&query=%24.public_repos&label=Public%20repositories&color=2563eb&cacheSeconds=300" alt="Live public repository count" />
+  </a>
+  <a href="https://github.com/search?q=author%3AAnujbarwal&type=commits">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fcommits%3Fq%3Dauthor%253AAnujbarwal%26per_page%3D1&query=%24.total_count&label=Public%20commits&color=7c3aed&cacheSeconds=300" alt="Live public commit count" />
+  </a>
+  <a href="https://github.com/search?q=author%3AAnujbarwal+type%3Apr+is%3Amerged&type=pullrequests">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Dauthor%253AAnujbarwal%2Btype%253Apr%2Bis%253Amerged%26per_page%3D1&query=%24.total_count&label=PRs%20merged&color=10b981&cacheSeconds=300" alt="Live merged pull request count" />
+  </a>
+  <a href="https://github.com/Anujbarwal?tab=followers">
+    <img src="https://img.shields.io/github/followers/Anujbarwal?label=Followers&style=for-the-badge&color=0891b2&logo=github" alt="GitHub followers" />
   </a>
   <a href="https://github.com/Anujbarwal">
-    <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Anujbarwal&theme=tokyonight" alt="Anujbarwal Profile Summary" />
+    <img src="https://komarev.com/ghpvc/?username=Anujbarwal&label=Profile%20Views&color=0284c7&style=for-the-badge" alt="Profile views" />
   </a>
 </div>
 
-<div align="center">
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Anujbarwal&theme=tokyonight" alt="Top Languages" />
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Anujbarwal&theme=tokyonight" alt="Commit Languages" />
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Anujbarwal&theme=tokyonight" alt="Stats Card" />
-</div>
+<p align="center"><sub>Repository, commit, and merged-PR totals come from GitHub's public API and refresh through Shields.io's short-lived cache. Private activity is not included.</sub></p>
 
 <!-- 3D / AREA LIVE CONTRIBUTION GRAPH -->
 <div align="center">
