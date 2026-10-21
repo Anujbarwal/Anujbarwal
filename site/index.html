@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#09111f">
+    <meta name="description" content="Anuj's beginner-friendly 12–18 month full-stack developer roadmap, project ladder, learning resources, and progress tracker.">
+    <meta property="og:title" content="Anuj's Full-Stack Roadmap">
+    <meta property="og:description" content="A practical, build-first journey from absolute zero to full-stack development.">
+    <meta property="og:type" content="website">
+    <title>Anuj's Full-Stack Roadmap</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Anuj's roadmap home"><span class="wordmark-mark">A<span>.</span></span><span>THE BUILD LOG</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#roadmap">Roadmap</a>
+        <a href="#projects">Projects</a>
+        <a href="#resources">Resources</a>
+        <a class="nav-profile" href="https://github.com/Anujbarwal">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-wrap" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> A beginner's build-first roadmap</p>
+          <h1 id="hero-title">From zero<br>to <span class="gradient-text">full-stack.</span></h1>
+          <p class="hero-lede">A practical 12–18 month journey from my first HTML page to applications built, tested, and running on the internet.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#roadmap">Explore the roadmap <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="https://github.com/Anujbarwal?tab=repositories">See my code <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-note"><span class="note-icon" aria-hidden="true">✳</span><span>Made for steady progress: <strong>10–15 hours a week</strong>, learning by building.</span></div>
+          <div class="hero-note hosting-note"><span class="status-dot"></span><span><strong>24/7-ready on GitHub Pages.</strong> The emoji keeps moving while you explore.</span></div>
+        </div>
+        <div class="hero-art" aria-label="An animated three-dimensional developer emoji at work">
+          <div class="art-grid" aria-hidden="true"></div>
+          <div class="art-glow" aria-hidden="true"></div>
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="float-card float-card-code" aria-hidden="true"><span>01</span> keep building<span class="cursor">_</span></div>
+          <div class="float-card float-card-ship" aria-hidden="true"><span class="ship-check">✓</span> shipped, not perfect</div>
+          <div class="emoji-scene" aria-hidden="true">
+            <span class="emoji-shadow"></span>
+            <span class="emoji-orb"><span class="emoji-face">👨‍💻</span></span>
+            <span class="emoji-spark spark-one">✦</span>
+            <span class="emoji-spark spark-two">✧</span>
+          </div>
+          <p class="art-caption">LEARN&nbsp; · &nbsp;BUILD&nbsp; · &nbsp;REPEAT</p>
+        </div>
+        <div class="hero-scroll" aria-hidden="true"><span></span> SCROLL TO EXPLORE</div>
+      </section>
+
+      <section class="stats section-wrap" aria-label="Roadmap at a glance">
+        <div class="stat"><strong>12–18</strong><span>months, at a steady pace</span></div>
+        <div class="stat"><strong>12</strong><span>projects, each one a step up</span></div>
+        <div class="stat"><strong>~220</strong><span>DSA problems, alongside projects</span></div>
+        <div class="stat"><strong>10–15</strong><span>hours of focused work a week</span></div>
+      </section>
+
+      <section class="intro section-wrap">
+        <div>
+          <p class="eyebrow">THE APPROACH</p>
+          <h2>Less tutorial-hopping.<br><span class="muted">More making things work.</span></h2>
+        </div>
+        <p class="intro-copy">This plan assumes no coding or computer-science background. It starts with the structure of a web page, moves carefully through JavaScript, then connects the front end, server, database, tests, and deployment into complete applications.</p>
+      </section>
+
+      <section class="roadmap-section section-wrap" id="roadmap" aria-labelledby="roadmap-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE LEARNING PATH</p><h2 id="roadmap-title">One layer at a time.</h2></div>
+          <p>Use the checkboxes to keep track of milestones. Your progress stays in this browser.</p>
+        </div>
+        <div class="progress-panel">
+          <div class="progress-copy"><div><strong id="progress-count">0 of 10 milestones</strong><span id="progress-message">Your first step is ready when you are.</span></div><button class="text-button" id="reset-progress" type="button">Reset progress</button></div>
+          <div class="progress-track" role="progressbar" aria-label="Roadmap progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="progress-bar"><span id="progress-fill"></span></div>
+        </div>
+        <div class="roadmap-list">
+          <article class="roadmap-card">
+            <div class="phase-number">01</div><div class="phase-body"><p class="phase-time">MONTH 1 · 3–4 WEEKS</p><h3>HTML — give the web its structure</h3><p>Learn semantic elements, headings, links, images, lists, forms, and how to organize a page so browsers and people can understand it.</p><div class="phase-tags"><span>Semantic HTML</span><span>Forms</span><span>Accessibility basics</span></div></div><label class="milestone-check"><input type="checkbox" data-milestone="html"><span>Mark complete</span></label>
+          </article>
+          <article class="roadmap-card">
+            <div class="phase-number">02</div><div class="phase-body"><p class="phase-time">MONTH 2 · 4–5 WEEKS</p><h3>CSS — make it responsive and clear</h3><p>Understand the box model, selectors, typography, Flexbox, Grid, spacing, and media queries. Build for a phone as well as a laptop.</p><div class="phase-tags"><span>CSS foundations</span><span>Flexbox & Grid</span><span>Responsive layout</span></div></div><label class="milestone-check"><input type="checkbox" data-milestone="css"><span>Mark complete</span></label>
+          </article>
+          <article class="roadmap-card">
+            <div class="phase-number">03</div><div class="phase-body"><p class="phase-time">MONTHS 3–5 · 12–14 WEEKS</p><h3>JavaScript — learn to program</h3><p>Take the time to understand variables, functions, arrays, objects, the DOM, events, promises, async/await, fetching data, and debugging.</p><div class="phase-tags"><span>Core language</span><span>DOM & events</span><span>Async JavaScript</span></div></div><label class="milestone-check"><input type="checkbox" data-milestone="javascript"><span>Mark complete</span></label>
+          </article>
+          <article class="roadmap-card">
+            <div class="phase-number">04</div><div class="phase-body"><p class="phase-time">MONTH 6 · 3–4 WEEKS</p><h3>Git, GitHub & going live</h3><p>Track changes with Git, write useful commits, work with a remote repository, and put projects online. Deploy early, then deploy every new project.</p><div class="phase-tags"><span>Git & GitHub</span><span>Commits</span><span>Deployment</span></div></div><label class="milestone-check"><input type="checkbox" data-milestone="git"><span>Mark complete</span></label>
+          </article>
+          <article class="roadmap-card">
+            <div class="phase-number">05</div><div class="phase-body"><p class="phase-time">MONTHS 7–8 · 8–9 WEEKS</p><h3>React & TypeScript — build interfaces</h3><p>Compose reusable components, pass props, manage state, add routes, fetch data, and use TypeScript to make application code easier to reason about.</p><div class="phase-tags"><span>React</span><span>Routing</span><span>TypeScript</span></div></div><label class="milestone-check"><input type="checkbox" data-milestone="react"><span>Mark complete</span></label>
+          </article>
+          <article class="roadmap-card">
+            <div class="phase-number">06</div><div class="phase-body"><p class="phase-time">MONTHS 9–10 · 8–9 WEEKS</p><h3>Node.js & Express — build the server</h3><p>Run JavaScript outside the browser, design REST APIs, validate requests, handle errors, and connect a React app to your own server.</p><div class="phase-tags"><span>Node.js</span><span>Express</span><span>REST APIs</span></div></div><label class="milestone-check"><input type="checkbox" data-milestone="backend"><span>Mark complete</span></label>
+          </article>
+          <article class="roadmap-card">
+            <div class="phase-number">07</div><div class="phase-body"><p class="phase-time">MONTH 11 · 4–5 WEEKS</p><h3>PostgreSQL & SQL — persist real data</h3><p>Model tables and relationships, write queries and joins, understand constraints and indexes, and store application data beyond a single session.</p><div class="phase-tags"><span>PostgreSQL</span><span>SQL queries</span><span>Data modeling</span></div></div><label class="milestone-check"><input type="checkbox" data-milestone="database"><span>Mark complete</span></label>
+          </article>
+          <article class="roadmap-card">
+            <div class="phase-number">08</div><div class="phase-body"><p class="phase-time">MONTH 12 · 4–5 WEEKS</p><h3>Authentication, security & testing</h3><p>Learn authentication versus authorization, protect user data, practice OWASP basics, and test your application so changes do not break working behavior.</p><div class="phase-tags"><span>Login & roles</span><span>OWASP basics</span><span>Automated tests</span></div></div><label class="milestone-check"><input type="checkbox" data-milestone="security"><span>Mark complete</span></label>
+          </article>
+          <article class="roadmap-card">
+            <div class="phase-number">09</div><div class="phase-body"><p class="phase-time">MONTHS 13–14 · 6–8 WEEKS</p><h3>Docker, CI/CD & operations</h3><p>Package your application, automate checks in GitHub Actions, deploy from a clean environment, configure secrets safely, and monitor the running app.</p><div class="phase-tags"><span>Docker</span><span>GitHub Actions</span><span>Cloud deployment</span></div></div><label class="milestone-check"><input type="checkbox" data-milestone="operations"><span>Mark complete</span></label>
+          </article>
+          <article class="roadmap-card roadmap-card-featured">
+            <div class="phase-number">10</div><div class="phase-body"><p class="phase-time">MONTHS 11–17 · PORTFOLIO</p><h3>Build three original flagship projects</h3><p>Solve problems you have actually seen. Deploy each project, add tests and a useful README, and be ready to explain what you would improve next.</p><div class="phase-tags"><span>Real-world problem</span><span>Working demo</span><span>Portfolio-ready</span></div></div><label class="milestone-check"><input type="checkbox" data-milestone="portfolio"><span>Mark complete</span></label>
+          </article>
+        </div>
+        <aside class="parallel-track"><span class="parallel-icon" aria-hidden="true">⌘</span><div><strong>Alongside the roadmap: data structures & algorithms</strong><p>Start around month 7, practise throughout, and work toward about 220 problems. Choose one structured track rather than switching between several.</p></div><span class="parallel-range">MONTHS 7–18</span></aside>
+      </section>
+
+      <section class="projects-section section-wrap" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE PROJECT LADDER</p><h2 id="projects-title">Make the learning visible.</h2></div>
+          <p>Each project adds only one or two genuinely new challenges. Tick a box to save your progress on this device.</p>
+        </div>
+        <div class="project-tools"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search projects</span><input type="search" id="project-search" placeholder="Find a project or skill..." autocomplete="off"></label><div class="filter-group" role="group" aria-label="Filter projects by stage"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter-button" type="button" data-filter="foundations" aria-pressed="false">Foundations</button><button class="filter-button" type="button" data-filter="react" aria-pressed="false">React</button><button class="filter-button" type="button" data-filter="backend" aria-pressed="false">Full-stack</button><button class="filter-button" type="button" data-filter="portfolio" aria-pressed="false">Flagship</button></div></div>
+        <p class="results-count" id="project-results" aria-live="polite">Showing 12 projects</p>
+        <ol class="project-grid" id="project-list">
+          <li class="project-card" data-track="foundations" data-search="personal profile page html structure links images"><div class="project-top"><span class="project-index">01</span><label class="project-check"><input type="checkbox" data-project="profile"><span class="sr-only">Mark Personal profile page complete</span></label></div><p class="project-month">MONTH 1</p><h3>Personal profile page</h3><p>Structure, links, images, and your first page on the web.</p><div class="project-skill">HTML STRUCTURE</div></li>
+          <li class="project-card" data-track="foundations" data-search="styled multi page website css responsive navigation"><div class="project-top"><span class="project-index">02</span><label class="project-check"><input type="checkbox" data-project="multi-page"><span class="sr-only">Mark Responsive multi-page website complete</span></label></div><p class="project-month">MONTH 2</p><h3>Responsive multi-page site</h3><p>Build a mobile-friendly site with working navigation and layout.</p><div class="project-skill">CSS & RESPONSIVE DESIGN</div></li>
+          <li class="project-card" data-track="foundations" data-search="calculator javascript dom events edge cases"><div class="project-top"><span class="project-index">03</span><label class="project-check"><input type="checkbox" data-project="calculator"><span class="sr-only">Mark Calculator complete</span></label></div><p class="project-month">MONTH 3</p><h3>Interactive calculator</h3><p>Connect user actions to page updates and handle edge cases.</p><div class="project-skill">DOM & EVENTS</div></li>
+          <li class="project-card" data-track="foundations" data-search="quiz app timer state conditional display"><div class="project-top"><span class="project-index">04</span><label class="project-check"><input type="checkbox" data-project="quiz"><span class="sr-only">Mark Timed quiz application complete</span></label></div><p class="project-month">MONTH 4</p><h3>Timed quiz application</h3><p>Keep score, manage a timer, and show the right question at the right time.</p><div class="project-skill">STATE & TIMERS</div></li>
+          <li class="project-card" data-track="foundations" data-search="weather app public api fetch async await loading error"><div class="project-top"><span class="project-index">05</span><label class="project-check"><input type="checkbox" data-project="weather"><span class="sr-only">Mark Weather app complete</span></label></div><p class="project-month">MONTH 4</p><h3>Weather app</h3><p>Fetch public data and make loading and error states useful.</p><div class="project-skill">ASYNC & PUBLIC APIS</div></li>
+          <li class="project-card" data-track="foundations" data-search="expense tracker charts data aggregation persistence"><div class="project-top"><span class="project-index">06</span><label class="project-check"><input type="checkbox" data-project="expenses"><span class="sr-only">Mark Expense tracker complete</span></label></div><p class="project-month">MONTH 5</p><h3>Expense tracker & charts</h3><p>Summarize data, display it clearly, and keep it between visits.</p><div class="project-skill">DATA & PERSISTENCE</div></li>
+          <li class="project-card" data-track="react" data-search="movie browser react components props state routes search filters"><div class="project-top"><span class="project-index">07</span><label class="project-check"><input type="checkbox" data-project="movie-browser"><span class="sr-only">Mark React movie browser complete</span></label></div><p class="project-month">MONTH 7</p><h3>React movie browser</h3><p>Build reusable components, routes, search, and filters.</p><div class="project-skill">REACT & ROUTING</div></li>
+          <li class="project-card" data-track="react" data-search="dashboard views shared state charts typescript custom hooks"><div class="project-top"><span class="project-index">08</span><label class="project-check"><input type="checkbox" data-project="dashboard"><span class="sr-only">Mark Analytics dashboard complete</span></label></div><p class="project-month">MONTH 8</p><h3>Multi-view dashboard</h3><p>Bring charts, typed data, and shared state together.</p><div class="project-skill">TYPESCRIPT & STATE</div></li>
+          <li class="project-card" data-track="backend" data-search="blog own api react node express rest full stack"><div class="project-top"><span class="project-index">09</span><label class="project-check"><input type="checkbox" data-project="blog"><span class="sr-only">Mark Full-stack blog complete</span></label></div><p class="project-month">MONTH 10</p><h3>Blog with your own API</h3><p>Connect a front end to your own server for the first time.</p><div class="project-skill">REACT + EXPRESS API</div></li>
+          <li class="project-card project-card-flagship" data-track="portfolio" data-search="flagship real tool workflow database auth roles file uploads deploy"><div class="project-top"><span class="project-index">10</span><label class="project-check"><input type="checkbox" data-project="flagship-one"><span class="sr-only">Mark First flagship project complete</span></label></div><p class="project-month">MONTHS 11–13</p><h3>A tool for a real problem</h3><p>Database design, authentication, roles, and file uploads.</p><div class="project-skill">FLAGSHIP 01</div></li>
+          <li class="project-card project-card-flagship" data-track="portfolio" data-search="flagship domain complex business rules background jobs reporting"><div class="project-top"><span class="project-index">11</span><label class="project-check"><input type="checkbox" data-project="flagship-two"><span class="sr-only">Mark Second flagship project complete</span></label></div><p class="project-month">MONTHS 13–15</p><h3>Build for a domain you know</h3><p>Model real business rules, background work, and reporting.</p><div class="project-skill">FLAGSHIP 02</div></li>
+          <li class="project-card project-card-flagship" data-track="portfolio" data-search="flagship real time web sockets performance ai ambitious"><div class="project-top"><span class="project-index">12</span><label class="project-check"><input type="checkbox" data-project="flagship-three"><span class="sr-only">Mark Third flagship project complete</span></label></div><p class="project-month">MONTHS 15–17</p><h3>Take on a technical challenge</h3><p>Explore real-time updates, performance, or an AI integration.</p><div class="project-skill">FLAGSHIP 03</div></li>
+        </ol>
+        <p class="empty-state" id="empty-projects" hidden>No projects match that search. Try another skill or filter.</p>
+        <p class="storage-note"><span aria-hidden="true">◷</span> Progress is saved locally in this browser. It is not synced to GitHub.</p>
+      </section>
+
+      <section class="method-section section-wrap">
+        <div class="method-heading"><p class="eyebrow">THE REPEATABLE LOOP</p><h2>Do this every session.</h2><p>Small lessons. Lots of deliberate practice. A finished thing to show for it.</p></div>
+        <div class="method-steps">
+          <article><span>01</span><h3>Learn one thing</h3><p>Read or watch for 20–30 minutes. Focus on one small idea.</p></article>
+          <article><span>02</span><h3>Type it yourself</h3><p>Run the example, make a deliberate change, and predict what happens.</p></article>
+          <article><span>03</span><h3>Build something new</h3><p>Use the idea in a tiny project that wasn't in the lesson.</p></article>
+          <article><span>04</span><h3>Write & revisit</h3><p>Explain it in your own words, then try to rebuild it from memory next week.</p></article>
+        </div>
+      </section>
+
+      <section class="milestones-section section-wrap" aria-labelledby="milestones-title">
+        <div class="section-heading"><div><p class="eyebrow">CHECK YOUR UNDERSTANDING</p><h2 id="milestones-title">Milestones are self-tests.</h2></div><p>If a test is hard, revisit the specific skill and try again. No need to start over or rush ahead.</p></div>
+        <div class="test-grid">
+          <article><span>AFTER MONTH 2</span><h3>Build a page from a screenshot</h3><p>Make a responsive landing page without a tutorial open. Explain the box model and specificity.</p></article>
+          <article><span>AFTER MONTH 5</span><h3>Build a small API-powered app</h3><p>Fetch, display, and filter data with a loading state. Explain async/await and debug a broken function.</p></article>
+          <article><span>AFTER MONTH 8</span><h3>Build a three-route React app</h3><p>Fetch a list, build a detail page, add a filter, and explain props versus state.</p></article>
+          <article><span>AFTER MONTH 11</span><h3>Design data and an API</h3><p>Model related tables, write a join, and build a validated CRUD API from an empty folder.</p></article>
+          <article><span>AFTER MONTH 14</span><h3>Deploy from a clean start</h3><p>Put a project online with HTTPS and a database. Explain how its login works end to end.</p></article>
+          <article><span>AROUND MONTH 17</span><h3>Show work you can explain</h3><p>Three live flagship projects, tests, a clear resume, and mock interviews you have reviewed.</p></article>
+        </div>
+      </section>
+
+      <section class="resources-section section-wrap" id="resources" aria-labelledby="resources-title">
+        <div class="section-heading"><div><p class="eyebrow">FREE, IN ORDER</p><h2 id="resources-title">A short list to get started.</h2></div><p>Pick one main resource for each stage and finish it before collecting more tabs.</p></div>
+        <div class="resource-list">
+          <a href="https://www.theodinproject.com/" target="_blank" rel="noreferrer"><span class="resource-stage">OVERALL</span><span class="resource-name">The Odin Project</span><span class="resource-detail">Project-based curriculum <span aria-hidden="true">↗</span></span></a>
+          <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noreferrer"><span class="resource-stage">HTML & CSS</span><span class="resource-name">freeCodeCamp</span><span class="resource-detail">Responsive Web Design <span aria-hidden="true">↗</span></span></a>
+          <a href="https://javascript.info/" target="_blank" rel="noreferrer"><span class="resource-stage">JAVASCRIPT</span><span class="resource-name">The Modern JavaScript Tutorial</span><span class="resource-detail">javascript.info <span aria-hidden="true">↗</span></span></a>
+          <a href="https://learngitbranching.js.org/" target="_blank" rel="noreferrer"><span class="resource-stage">GIT</span><span class="resource-name">Learn Git Branching</span><span class="resource-detail">Interactive practice <span aria-hidden="true">↗</span></span></a>
+          <a href="https://react.dev/learn" target="_blank" rel="noreferrer"><span class="resource-stage">REACT</span><span class="resource-name">React documentation</span><span class="resource-detail">Official Learn section <span aria-hidden="true">↗</span></span></a>
+          <a href="https://sqlbolt.com/" target="_blank" rel="noreferrer"><span class="resource-stage">SQL</span><span class="resource-name">SQLBolt</span><span class="resource-detail">Hands-on SQL lessons <span aria-hidden="true">↗</span></span></a>
+          <a href="https://portswigger.net/web-security" target="_blank" rel="noreferrer"><span class="resource-stage">SECURITY</span><span class="resource-name">PortSwigger Web Security Academy</span><span class="resource-detail">Free security labs <span aria-hidden="true">↗</span></span></a>
+          <a href="https://neetcode.io/practice" target="_blank" rel="noreferrer"><span class="resource-stage">DSA</span><span class="resource-name">NeetCode</span><span class="resource-detail">Structured problem list <span aria-hidden="true">↗</span></span></a>
+        </div>
+      </section>
+
+      <section class="closing-section section-wrap">
+        <div class="closing-art" aria-hidden="true"><span>🚀</span><i></i></div>
+        <div><p class="eyebrow">START SMALL. KEEP GOING.</p><h2>Forty minutes can<br>start the whole thing.</h2><p>One small page. One concept. One honest commit. The next step will be easier to see once you've begun.</p><a class="button button-primary" href="https://github.com/Anujbarwal?tab=repositories">Follow along on GitHub <span aria-hidden="true">↗</span></a></div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-wrap">
+      <a class="wordmark footer-mark" href="#top"><span class="wordmark-mark">A<span>.</span></span><span>MADE BY ANUJ</span></a>
+      <p>Built one step at a time · <a href="https://github.com/Anujbarwal">GitHub profile ↗</a></p>
+      <p class="local-clock"><span class="status-dot"></span><span id="local-time">Your local time</span></p>
+    </footer>
+  </body>
+</html>
