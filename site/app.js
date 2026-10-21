@@ -200,6 +200,7 @@ projectSearch.addEventListener("input", filterProjects);
 
 const heroArt = document.querySelector(".hero-art");
 const heroCopy = document.querySelector(".hero-copy");
+const sceneTrigger = document.querySelector("#scene-trigger");
 const emojiScene = document.querySelector(".emoji-scene");
 const heroKicker = document.querySelector("#hero-kicker");
 const heroTitleFirst = document.querySelector("#hero-title-first");
@@ -292,6 +293,7 @@ heroArt.addEventListener("pointerleave", () => {
   emojiScene.style.setProperty("--pointer-y", "0deg");
 });
 
+sceneTrigger.addEventListener("click", showNextCodingScene);
 window.setInterval(showNextCodingScene, 5_000);
 updateProgress();
 filterProjects();
