@@ -24,6 +24,10 @@
   <img src="https://img.shields.io/badge/Focus-Full--Stack%20%2B%20DSA-10b981?style=for-the-badge&logo=target&logoColor=white" alt="Focus" />
 </div>
 
+<p align="center">
+  <a href="https://anujbarwal.github.io/Anujbarwal/"><strong>🧭 Open the interactive roadmap, 3D coding emoji, and project tracker →</strong></a>
+</p>
+
 ---
 
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" width="32" height="32" /> Engineering Philosophy & Live Code Review Standard
@@ -48,8 +52,8 @@
   stack: ["HTML", "CSS", "JS", "React", "Node", "SQL"],
   dsaTarget: "220 Patterns (NeetCode 150)",
   codeReviewRule: (code) => {
-    return canExplainFromScratch(code) 
-      ? "git commit & open PR ✅" 
+    return canExplainFromScratch(code)
+      ? "git commit & open PR ✅"
       : "rewrite from memory 🔄";
   }
 };</code></pre>
@@ -100,6 +104,8 @@
 | **08** | Month 12 | **Auth, OWASP Security & Testing** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | bcrypt, JWT/Sessions, RBAC + Vitest, Supertest, Playwright |
 | **09** | Months 13–14 | **Docker, CI/CD & AWS Cloud** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | GitHub Actions linter/test pipeline + AWS EC2/RDS/HTTPS |
 | **10** | Months 13–17 | **3 Flagship Portfolio Systems** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | Live URL, demo login, trade-offs doc & 3-min walkthrough |
+
+The [interactive roadmap website](https://anujbarwal.github.io/Anujbarwal/) expands these milestones with a searchable project ladder, self-tests, curated learning resources, and a progress tracker saved in the visitor's browser.
 
 ---
 
