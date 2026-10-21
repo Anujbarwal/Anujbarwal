@@ -25,7 +25,7 @@
 </div>
 
 <p align="center">
-  <a href="https://anujbarwal.github.io/Anujbarwal/"><strong>🧭 Open the interactive roadmap, 3D coding emoji, and project tracker →</strong></a>
+  <a href="https://anujbarwal.github.io/Full-Stack-From-Zero-Roadmap/"><strong>🧭 Open the live Full-Stack From Zero roadmap website →</strong></a>
 </p>
 
 ---
@@ -105,7 +105,47 @@
 | **09** | Months 13–14 | **Docker, CI/CD & AWS Cloud** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | GitHub Actions linter/test pipeline + AWS EC2/RDS/HTTPS |
 | **10** | Months 13–17 | **3 Flagship Portfolio Systems** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | Live URL, demo login, trade-offs doc & 3-min walkthrough |
 
-The [interactive roadmap website](https://anujbarwal.github.io/Anujbarwal/) expands these milestones with a searchable project ladder, self-tests, curated learning resources, and a progress tracker saved in the visitor's browser.
+The [live interactive roadmap website](https://anujbarwal.github.io/Full-Stack-From-Zero-Roadmap/) expands these milestones with a searchable project ladder, self-tests, curated learning resources, a browser-saved progress tracker, a live countdown, animated coding scenes, and computing-history quotes.
+
+### Standalone Website Repository & Build History
+
+The site has its own [public repository](https://github.com/Anujbarwal/Full-Stack-From-Zero-Roadmap), separate from this profile repository. Its README contains the [step-by-step build and GitHub Pages deployment guide](https://github.com/Anujbarwal/Full-Stack-From-Zero-Roadmap#build-it-step-by-step), explains the project files and browser features, and documents every original feature PR.
+
+| Website | Source | Build guide | Commit history |
+| :--- | :--- | :--- | :--- |
+| [Open the live site](https://anujbarwal.github.io/Full-Stack-From-Zero-Roadmap/) | [Standalone source code](https://github.com/Anujbarwal/Full-Stack-From-Zero-Roadmap) | [How to build and deploy](https://github.com/Anujbarwal/Full-Stack-From-Zero-Roadmap#build-it-step-by-step) | [Standalone commits](https://github.com/Anujbarwal/Full-Stack-From-Zero-Roadmap/commits/main/) · [Original profile-repo commits](https://github.com/Anujbarwal/Anujbarwal/commits/main/) |
+
+<details>
+<summary><b>View all 15 website feature PRs</b></summary>
+<br>
+
+The links below open each original PR, including its review conversation, file changes, and individual commits. The standalone repository guide also explains these changes step by step.
+
+**Foundation and identity**
+
+1. [PR #1 — Add the interactive full-stack roadmap website](https://github.com/Anujbarwal/Anujbarwal/pull/1)
+2. [PR #2 — Add the animated coding favicon](https://github.com/Anujbarwal/Anujbarwal/pull/2)
+3. [PR #3 — Add the coding laptop site logo](https://github.com/Anujbarwal/Anujbarwal/pull/3)
+4. [PR #4 — Cycle coding characters in the logo](https://github.com/Anujbarwal/Anujbarwal/pull/4)
+5. [PR #5 — Add the live local clock](https://github.com/Anujbarwal/Anujbarwal/pull/5)
+
+**Course countdown iterations**
+
+6. [PR #6 — Add the 18-month course countdown](https://github.com/Anujbarwal/Anujbarwal/pull/6)
+7. [PR #7 — Show the countdown on a digital watch](https://github.com/Anujbarwal/Anujbarwal/pull/7)
+8. [PR #8 — Remove the watch, keep the code-style countdown](https://github.com/Anujbarwal/Anujbarwal/pull/8)
+9. [PR #9 — Replace the code block with a text timer](https://github.com/Anujbarwal/Anujbarwal/pull/9)
+10. [PR #10 — Restore the PR #8 countdown presentation](https://github.com/Anujbarwal/Anujbarwal/pull/10)
+
+**Animated hero and computing quotes**
+
+11. [PR #11 — Add rotating coding quotes to the hero](https://github.com/Anujbarwal/Anujbarwal/pull/11)
+12. [PR #12 — Rotate all hero copy](https://github.com/Anujbarwal/Anujbarwal/pull/12)
+13. [PR #13 — Slow hero rotation to five seconds](https://github.com/Anujbarwal/Anujbarwal/pull/13)
+14. [PR #14 — Make the hero coding scene clickable](https://github.com/Anujbarwal/Anujbarwal/pull/14)
+15. [PR #15 — Add the rotating computer-science quotes section](https://github.com/Anujbarwal/Anujbarwal/pull/15)
+
+</details>
 
 ---
 
