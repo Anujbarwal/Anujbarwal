@@ -374,6 +374,26 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
 .local-clock .status-dot { width: 6px; height: 6px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
 
+.quotes-section { padding-block: 72px 28px; }
+.quotes-section .section-heading { margin-bottom: 22px; }
+.quote-card { position: relative; min-height: 230px; padding: clamp(25px, 5vw, 46px); overflow: hidden; border: 1px solid rgba(131, 240, 215, .19); border-radius: 16px; background: radial-gradient(ellipse at 12% 0%, rgba(71, 136, 190, .2), transparent 48%), linear-gradient(130deg, rgba(17, 32, 51, .96), rgba(12, 21, 37, .95)); box-shadow: 0 22px 60px rgba(0, 0, 0, .2), inset 0 1px rgba(255, 255, 255, .05); }
+.quote-card::after { position: absolute; right: -35px; bottom: -90px; width: 240px; height: 240px; border: 1px solid rgba(131, 240, 215, .1); border-radius: 50%; box-shadow: 0 0 0 18px rgba(131, 240, 215, .025), 0 0 0 40px rgba(137, 184, 255, .025); content: ""; pointer-events: none; }
+.quote-ornament { position: absolute; top: 15px; left: 24px; color: rgba(131, 240, 215, .2); font-family: Georgia, serif; font-size: 100px; line-height: 1; }
+.quote-card blockquote { position: relative; z-index: 1; max-width: 850px; min-height: 92px; margin: 0 0 26px; color: var(--text); font-family: var(--display); font-size: clamp(21px, 3.4vw, 36px); font-weight: 650; letter-spacing: -.045em; line-height: 1.35; }
+.quote-footer { position: relative; z-index: 1; display: flex; align-items: end; justify-content: space-between; gap: 20px; }
+.quote-footer > div { display: grid; gap: 4px; }
+.quote-footer cite { color: var(--mint); font-size: 12px; font-style: normal; font-weight: 700; }
+.quote-footer a { width: fit-content; color: var(--muted); font-size: 10px; text-decoration-color: rgba(161, 175, 195, .4); text-underline-offset: 3px; }
+.quote-footer a:hover { color: var(--mint); }
+.quote-count { color: var(--blue); font-family: var(--mono); font-size: 10px; white-space: nowrap; }
+.quote-card.is-changing { animation: quote-card-arrive .8s cubic-bezier(.2, .8, .2, 1) both; }
+.quote-controls { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 13px 3px 0; }
+.quote-live { display: flex; align-items: center; gap: 8px; color: var(--subtle); font-family: var(--mono); font-size: 9px; letter-spacing: .08em; }
+.quote-live .status-dot { width: 6px; height: 6px; animation: watch-live-pulse 1.8s ease-in-out infinite; }
+.quote-toggle { padding: 7px 11px; border: 1px solid var(--line); border-radius: 7px; background: rgba(16, 27, 45, .6); color: var(--muted); cursor: pointer; font-size: 10px; transition: border-color .2s ease, color .2s ease, background .2s ease; }
+.quote-toggle:hover { border-color: rgba(131, 240, 215, .4); background: rgba(131, 240, 215, .08); color: var(--mint); }
+.quote-toggle[aria-pressed="true"] { border-color: rgba(131, 240, 215, .3); color: var(--mint); }
+
 .course-timer-section {
   position: relative;
   display: grid;
@@ -418,6 +438,7 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
 @keyframes orbit-pulse { 0%, 100% { opacity: .45; } 50% { opacity: .95; } }
 @keyframes sparkle { 0%, 100% { opacity: .38; transform: scale(.8) rotate(0); } 50% { opacity: 1; transform: scale(1.15) rotate(25deg); } }
 @keyframes quote-arrive { 0% { opacity: .3; transform: translateY(7px) rotate(-5deg); } 100% { opacity: 1; transform: translateY(0) rotate(-5deg); } }
+@keyframes quote-card-arrive { 0% { opacity: .35; transform: translateY(10px) scale(.99); filter: blur(3px); } 60% { opacity: 1; filter: blur(0); } 100% { transform: translateY(0) scale(1); } }
 @keyframes coder-arrive { 0% { opacity: .35; transform: translateZ(30px) rotate(-22deg) scale(.72); } 100% { opacity: 1; transform: translateZ(30px) rotate(-8deg) scale(1); } }
 @keyframes hero-copy-arrive { 0% { opacity: .35; transform: translateY(12px) scale(.985); filter: blur(3px); } 60% { opacity: 1; filter: blur(0); } 100% { transform: translateY(0) scale(1); } }
 @keyframes blink { to { visibility: hidden; } }
@@ -431,6 +452,7 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
   .roadmap-card { grid-template-columns: 38px minmax(0, 1fr) 105px; gap: 11px; padding: 18px; }
   .method-section { grid-template-columns: 1fr 1.2fr; }
   .course-timer-section { grid-template-columns: minmax(0, 1fr) minmax(270px, .9fr); gap: 20px; padding-inline: 28px; }
+  .quotes-section { padding-block: 58px 20px; }
   .code-panel { padding: 18px; }
   .course-code { font-size: 10px; }
 }
@@ -457,6 +479,13 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
   .hero-scroll { display: none; }
   .stats { grid-template-columns: repeat(2, 1fr); row-gap: 16px; padding-block: 18px; }
   .course-timer-section { grid-template-columns: 1fr; gap: 25px; margin-top: 42px; padding: 26px 20px; }
+  .quotes-section { padding-top: 48px; }
+  .quote-card { min-height: 0; padding: 30px 21px 24px; }
+  .quote-ornament { top: 10px; left: 13px; font-size: 76px; }
+  .quote-card blockquote { min-height: 0; margin-bottom: 24px; font-size: 22px; }
+  .quote-footer { align-items: start; }
+  .quote-footer a { max-width: 230px; line-height: 1.5; }
+  .quote-live { font-size: 8px; letter-spacing: .03em; }
   .course-timer-copy h2 { font-size: 30px; }
   .code-panel { padding: 17px 14px; }
   .course-code { font-size: 9px; }

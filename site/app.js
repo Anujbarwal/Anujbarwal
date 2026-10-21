@@ -301,3 +301,71 @@ updateLocalTime();
 updateCourseCountdown();
 window.setInterval(updateLocalTime, 1_000);
 window.setInterval(updateCourseCountdown, 1_000);
+
+const featuredQuote = document.querySelector("#featured-quote");
+const quoteAuthor = document.querySelector("#quote-author");
+const quoteSource = document.querySelector("#quote-source");
+const quoteCount = document.querySelector("#quote-count");
+const quoteCard = document.querySelector("#quote-card");
+const quoteToggle = document.querySelector("#quote-toggle");
+const computingQuotes = [
+  {
+    text: "The whole of arithmetic now appeared within the grasp of mechanism.",
+    author: "Charles Babbage",
+    source: "Passages from the Life of a Philosopher · 1864",
+    url: "https://en.wikisource.org/wiki/Passages_from_the_Life_of_a_Philosopher/Chapter_VIII",
+  },
+  {
+    text: "It can do whatever we know how to order it to perform.",
+    author: "Ada Lovelace",
+    source: "Notes by the Translator · 1843",
+    url: "https://en.wikisource.org/wiki/Scientific_Memoirs/3/Sketch_of_the_Analytical_Engine_invented_by_Charles_Babbage,_Esq./Notes_by_the_Translator",
+  },
+  {
+    text: "We may say most aptly that the Analytical Engine weaves algebraical patterns just as the Jacquard-loom weaves flowers and leaves.",
+    author: "Ada Lovelace",
+    source: "Notes by the Translator · 1843",
+    url: "https://en.wikisource.org/wiki/Scientific_Memoirs/3/Sketch_of_the_Analytical_Engine_invented_by_Charles_Babbage,_Esq./Notes_by_the_Translator",
+  },
+  {
+    text: "The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.",
+    author: "Ada Lovelace",
+    source: "Notes by the Translator · 1843",
+    url: "https://en.wikisource.org/wiki/Scientific_Memoirs/3/Sketch_of_the_Analytical_Engine_invented_by_Charles_Babbage,_Esq./Notes_by_the_Translator",
+  },
+];
+let activeQuoteIndex = 0;
+let quoteRotationTimer;
+
+function showNextComputingQuote() {
+  activeQuoteIndex = (activeQuoteIndex + 1) % computingQuotes.length;
+  const quote = computingQuotes[activeQuoteIndex];
+
+  featuredQuote.textContent = quote.text;
+  quoteAuthor.textContent = quote.author;
+  quoteSource.textContent = quote.source;
+  quoteSource.href = quote.url;
+  quoteCount.textContent = `${String(activeQuoteIndex + 1).padStart(2, "0")} / ${String(computingQuotes.length).padStart(2, "0")}`;
+  quoteCard.classList.remove("is-changing");
+  void quoteCard.offsetWidth;
+  quoteCard.classList.add("is-changing");
+}
+
+function startQuoteRotation() {
+  quoteRotationTimer = window.setInterval(showNextComputingQuote, 5_000);
+  quoteToggle.textContent = "Pause quotes";
+  quoteToggle.setAttribute("aria-pressed", "false");
+}
+
+quoteToggle.addEventListener("click", () => {
+  if (quoteRotationTimer) {
+    window.clearInterval(quoteRotationTimer);
+    quoteRotationTimer = undefined;
+    quoteToggle.textContent = "Resume quotes";
+    quoteToggle.setAttribute("aria-pressed", "true");
+    return;
+  }
+
+  startQuoteRotation();
+});
+startQuoteRotation();
