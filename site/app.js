@@ -199,17 +199,62 @@ document.querySelectorAll("[data-filter]").forEach((button) => {
 projectSearch.addEventListener("input", filterProjects);
 
 const heroArt = document.querySelector(".hero-art");
+const heroCopy = document.querySelector(".hero-copy");
 const emojiScene = document.querySelector(".emoji-scene");
+const heroKicker = document.querySelector("#hero-kicker");
+const heroTitleFirst = document.querySelector("#hero-title-first");
+const heroTitleSecond = document.querySelector("#hero-title-second");
+const heroLede = document.querySelector("#hero-lede");
 const heroQuote = document.querySelector("#hero-coding-quote");
 const heroQuoteIndex = document.querySelector("#hero-quote-index");
 const heroCoder = document.querySelector("#hero-coder");
 const heroSceneCaption = document.querySelector("#hero-scene-caption");
 const codingScenes = [
-  { quote: "Build small. Ship often.", coder: "👨‍💻", caption: "BUILDER MODE" },
-  { quote: "Every bug leaves a clue.", coder: "👩‍💻", caption: "DEBUG MODE" },
-  { quote: "Make it work. Make it clear.", coder: "🤖", caption: "REFACTOR MODE" },
-  { quote: "Consistency compiles.", coder: "🧑‍💻", caption: "FOCUS MODE" },
-  { quote: "Learn it. Build it. Explain it.", coder: "🚀", caption: "SHIP MODE" },
+  {
+    kicker: "A beginner's build-first roadmap",
+    titleFirst: "From zero",
+    titleSecond: "to full-stack.",
+    lede: "A practical 12–18 month journey from my first HTML page to applications built, tested, and running on the internet.",
+    quote: "Build small. Ship often.",
+    coder: "👨‍💻",
+    caption: "BUILDER MODE",
+  },
+  {
+    kicker: "Debugging is part of the build",
+    titleFirst: "Find the bug.",
+    titleSecond: "Learn the fix.",
+    lede: "Read the error, follow the clues, and turn every broken build into a lesson you can use.",
+    quote: "Every bug leaves a clue.",
+    coder: "👩‍💻",
+    caption: "DEBUG MODE",
+  },
+  {
+    kicker: "Turn curiosity into code",
+    titleFirst: "Ideas become",
+    titleSecond: "working apps.",
+    lede: "Start with a small idea, shape it into a useful project, and bring it to life one feature at a time.",
+    quote: "Make it work. Make it clear.",
+    coder: "🤖",
+    caption: "REFACTOR MODE",
+  },
+  {
+    kicker: "Build a little every day",
+    titleFirst: "Small steps.",
+    titleSecond: "Real progress.",
+    lede: "A steady learning path through web foundations, full-stack projects, testing, and deployment.",
+    quote: "Consistency compiles.",
+    coder: "🧑‍💻",
+    caption: "FOCUS MODE",
+  },
+  {
+    kicker: "Grow one skill at a time",
+    titleFirst: "Make your next",
+    titleSecond: "commit count.",
+    lede: "Practice by making real things, then learn to explain how they work and what you would improve.",
+    quote: "Learn it. Build it. Explain it.",
+    coder: "🚀",
+    caption: "SHIP MODE",
+  },
 ];
 let activeCodingScene = 0;
 
@@ -217,11 +262,18 @@ function showNextCodingScene() {
   activeCodingScene = (activeCodingScene + 1) % codingScenes.length;
   const scene = codingScenes[activeCodingScene];
 
+  heroKicker.textContent = scene.kicker;
+  heroTitleFirst.textContent = scene.titleFirst;
+  heroTitleSecond.textContent = scene.titleSecond;
+  heroLede.textContent = scene.lede;
   heroQuote.textContent = scene.quote;
   heroQuoteIndex.textContent = String(activeCodingScene + 1).padStart(2, "0");
   heroCoder.textContent = scene.coder;
   heroSceneCaption.textContent = `SCENE ${String(activeCodingScene + 1).padStart(2, "0")} · ${scene.caption}`;
   heroArt.dataset.scene = String(activeCodingScene % 3);
+  heroCopy.classList.remove("is-changing");
+  void heroCopy.offsetWidth;
+  heroCopy.classList.add("is-changing");
   heroArt.classList.remove("is-changing");
   void heroArt.offsetWidth;
   heroArt.classList.add("is-changing");
@@ -240,7 +292,7 @@ heroArt.addEventListener("pointerleave", () => {
   emojiScene.style.setProperty("--pointer-y", "0deg");
 });
 
-window.setInterval(showNextCodingScene, 5_000);
+window.setInterval(showNextCodingScene, 1_000);
 updateProgress();
 filterProjects();
 updateLocalTime();
