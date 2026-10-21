@@ -70,23 +70,16 @@
           <p>Your personal course timer starts on your first visit and keeps its deadline in this browser. Small steps, steady progress, one milestone at a time.</p>
           <p class="course-timer-deadline" id="course-timer-deadline">Setting your course deadline…</p>
         </div>
-        <div class="course-watch-scene" role="timer" aria-label="Time remaining in your 18-month course plan">
-          <div class="course-watch">
-            <span class="watch-band watch-band-top" aria-hidden="true"></span>
-            <span class="watch-band watch-band-bottom" aria-hidden="true"></span>
-            <div class="watch-case">
-              <div class="watch-screen">
-                <div class="watch-screen-heading"><span><i class="watch-live-dot"></i> COURSE TIMER</span><span>18 MO</span></div>
-                <div class="watch-code" aria-live="off">
-                  <div><span class="code-keyword">const</span> <span class="code-variable">timeLeft</span> = {</div>
-                  <div class="watch-code-line"><span class="code-property">days</span>: <strong id="course-days">—</strong>,</div>
-                  <div class="watch-code-line"><span class="code-property">hours</span>: <strong id="course-hours">—</strong>,</div>
-                  <div class="watch-code-line"><span class="code-property">minutes</span>: <strong id="course-minutes">—</strong>,</div>
-                  <div class="watch-code-line"><span class="code-property">seconds</span>: <strong id="course-seconds">—</strong></div>
-                  <div><span class="code-brace">}</span>; <span class="code-comment">// until your 18-month goal</span><span class="code-cursor">_</span></div>
-                </div>
-              </div>
-            </div>
+        <div class="course-countdown-code" role="timer" aria-label="Time remaining in your 18-month course plan">
+          <div class="code-panel">
+            <div class="code-panel-heading"><span><i class="code-panel-live"></i> LIVE COURSE COUNTDOWN</span><span>18 MONTHS</span></div>
+            <pre class="course-code" aria-live="off"><code><span class="code-keyword">const</span> <span class="code-variable">timeLeft</span> = {
+  <span class="code-property">days</span>: <strong id="course-days">—</strong>,
+  <span class="code-property">hours</span>: <strong id="course-hours">—</strong>,
+  <span class="code-property">minutes</span>: <strong id="course-minutes">—</strong>,
+  <span class="code-property">seconds</span>: <strong id="course-seconds">—</strong>
+};
+<span class="code-comment">// until your course goal</span><span class="code-cursor">_</span></code></pre>
           </div>
         </div>
       </section>
