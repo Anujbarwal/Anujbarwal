@@ -1,16 +1,162 @@
-## Hi there 👋
+<!-- 3D ANIMATED WAVING HEADER (100% SVG - NEVER BREAKS ON GITHUB) -->
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,19,24&height=260&section=header&text=Anuj%20Barwal&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Developer%20in%20Progress%20%7C%20New%20Delhi,%20India%20%F0%9F%87%AE%F0%9F%87%B3&descAlignY=58&descSize=20" width="100%" alt="Header" />
+</div>
 
-<!--
-**Anujbarwal/Anujbarwal** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<!-- LIVE TYPING SVG ANIMATION -->
+<div align="center">
+  <a href="https://github.com/Anujbarwal">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=800&color=38BDF8&center=true&vCenter=true&width=800&lines=%F0%9F%9A%80+18-Month+Full-Stack+Engineering+Journey+From+Zero;%F0%9F%92%BB+30m+Input+%3A+90m+Building+%E2%80%94+Typing+Every+Line+By+Hand;%F0%9F%94%8D+Live+Self-Reviews%2C+PR+Workflows+%26+CI%2FCD+Pipelines;%E2%9A%A1+Consistency+Beats+Intensity%3A+13+Protected+Hours%2FWeek" alt="Typing SVG" />
+  </a>
+</div>
 
-Here are some ideas to get you started:
+<!-- LIVE DYNAMIC GITHUB TRACKING BADGES -->
+<div align="center">
+  <a href="https://github.com/Anujbarwal">
+    <img src="https://komarev.com/ghpvc/?username=Anujbarwal&label=Profile%20Views&color=0284c7&style=for-the-badge" alt="Profile Views" />
+  </a>
+  <a href="https://github.com/Anujbarwal?tab=followers">
+    <img src="https://img.shields.io/github/followers/Anujbarwal?label=Followers&style=for-the-badge&color=2563eb&logo=github" alt="Followers" />
+  </a>
+  <a href="https://github.com/Anujbarwal?tab=repositories">
+    <img src="https://img.shields.io/github/stars/Anujbarwal?affiliations=OWNER&style=for-the-badge&color=f59e0b&logo=starship" alt="Total Stars" />
+  </a>
+  <img src="https://img.shields.io/badge/Focus-Full--Stack%20%2B%20DSA-10b981?style=for-the-badge&logo=target&logoColor=white" alt="Focus" />
+</div>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" width="32" height="32" /> Engineering Philosophy & Live Code Review Standard
+
+<table>
+  <tr>
+    <td width="62%" valign="top">
+      <p>Welcome to my workspace! I am executing a structured <b>12–18 month Full-Stack Developer Roadmap</b> from New Delhi, India. Every repository on <a href="https://github.com/Anujbarwal"><b>@Anujbarwal</b></a> follows strict engineering discipline:</p>
+      <ul>
+        <li><b>🔍 Self-PR Code Review Workflow:</b> Feature branches (<code>git checkout -b feature-x</code>) → granular commits → Pull Request opened & self-reviewed before merging to <code>main</code>.</li>
+        <li><b>🧠 The AI Rule:</b> <i>"Never commit a line of code I could not have written myself and cannot explain."</i></li>
+        <li><b>🛠️ Deliberate Debugging:</b> Reading full stack traces, forming a single hypothesis, and stepping through browser/Node breakpoints instead of guessing.</li>
+        <li><b>⏱️ Weekly Protected Cadence:</b> 13 hours/week (Mon–Thu mornings/nights + 4-hour deep work block every Saturday).</li>
+      </ul>
+    </td>
+    <td width="38%" valign="middle">
+      <!-- LIVE TERMINAL CODE BLOCK (NEVER BREAKS) -->
+      <pre lang="javascript"><code>const anuj = {
+  username: "Anujbarwal",
+  location: "New Delhi, India 🇮🇳",
+  ratio: "30m Input : 90m Building",
+  stack: ["HTML", "CSS", "JS", "React", "Node", "SQL"],
+  dsaTarget: "220 Patterns (NeetCode 150)",
+  codeReviewRule: (code) => {
+    return canExplainFromScratch(code) 
+      ? "git commit & open PR ✅" 
+      : "rewrite from memory 🔄";
+  }
+};</code></pre>
+    </td>
+  </tr>
+</table>
+
+---
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="30" height="30" /> Live GitHub & Code Review Telemetry
+
+<!-- RELIABLE LIVE STATS CARDS (STREAK + SUMMARY CARDS) -->
+<div align="center">
+  <a href="https://github.com/Anujbarwal">
+    <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=Anujbarwal&theme=tokyonight&hide_border=true&border_radius=10" alt="Anujbarwal Streak" />
+  </a>
+  <a href="https://github.com/Anujbarwal">
+    <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Anujbarwal&theme=tokyonight" alt="Anujbarwal Profile Summary" />
+  </a>
+</div>
+
+<div align="center">
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Anujbarwal&theme=tokyonight" alt="Top Languages" />
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Anujbarwal&theme=tokyonight" alt="Commit Languages" />
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Anujbarwal&theme=tokyonight" alt="Stats Card" />
+</div>
+
+<!-- 3D / AREA LIVE CONTRIBUTION GRAPH -->
+<div align="center">
+  <a href="https://github.com/Anujbarwal">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Anujbarwal&bg_color=0f172a&color=38bdf8&line=818cf8&point=f472b6&area=true&hide_border=true&custom_title=Anujbarwal's%20Live%20Commit%20%26%20Code%20Review%20Activity" width="98%" alt="Activity Graph" />
+  </a>
+</div>
+
+---
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="30" height="30" /> Live Roadmap & Code Review Audit Tracker
+
+| Phase | Timeline | Stack & Focus | Progress | Self-Test & Code Review Gate |
+| :--- | :--- | :--- | :--- | :--- |
+| **01** | Month 1 | **HTML5 & Semantic Web** | ![Active](https://img.shields.io/badge/Status-In_Progress-38bdf8?style=flat-square) | Valid W3C markup, 6-input accessible form, 0 `div`-soup |
+| **02** | Month 2 | **CSS3, Flexbox, Grid, Tailwind** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | 90-min blind landing page build from screenshot |
+| **03** | Months 3–5 | **JavaScript (ES6+, DOM, Async)** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | Build API search app from blank folder + Debugger test |
+| **04** | Month 6 | **Git, PR Reviews & Deployment** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | Resolve merge conflict, PR self-review, 3 live URLs |
+| **05** | Months 7–8 | **React 19 + TypeScript + Router** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | 3-route SPA, custom hooks, TanStack Query, strict types |
+| **06** | Months 9–10 | **Node.js, Express & REST APIs** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | Layered architecture (`routes → controllers → services`) |
+| **07** | Month 11 | **PostgreSQL, SQL & Prisma/Drizzle**| ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | 3NF schema design, 3-table JOINs, `EXPLAIN ANALYZE` |
+| **08** | Month 12 | **Auth, OWASP Security & Testing** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | bcrypt, JWT/Sessions, RBAC + Vitest, Supertest, Playwright |
+| **09** | Months 13–14 | **Docker, CI/CD & AWS Cloud** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | GitHub Actions linter/test pipeline + AWS EC2/RDS/HTTPS |
+| **10** | Months 13–17 | **3 Flagship Portfolio Systems** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | Live URL, demo login, trade-offs doc & 3-min walkthrough |
+
+---
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="30" height="30" /> Live Repository & Code Review Board
+
+> *As I push projects to [`github.com/Anujbarwal`](https://github.com/Anujbarwal?tab=repositories), the live badges below automatically track my latest commits and repository state.*
+
+| # | Project Deliverable | Core Engineering Concept | Live Commit & Review Status |
+| :-: | :--- | :--- | :--- |
+| **01** | **Personal Profile Page** | Semantic HTML5, accessibility, relative paths | `[ ⏳ Building ]` |
+| **02** | **Responsive Multi-Page Site** | CSS Box Model, Flexbox, Grid, mobile-first media queries | `[ 🔒 Locked ]` |
+| **03** | **Interactive Calculator** | DOM events, state in variables, divide-by-zero edge cases | `[ 🔒 Locked ]` |
+| **04** | **Timed Quiz Application** | `setInterval`, dynamic DOM rendering, score state | `[ 🔒 Locked ]` |
+| **05** | **Public API Weather App** | `fetch()`, `async/await`, `try/catch`, loading/error UI | `[ 🔒 Locked ]` |
+| **06** | **Expense Tracker + Charts** | `Array.reduce()`, `localStorage`, third-party chart lib | `[ 🔒 Locked ]` |
+| **07** | **React Movie Browser** | Components, Props vs State, React Router, pagination | `[ 🔒 Locked ]` |
+| **08** | **Multi-View Analytics Dashboard**| TypeScript interfaces, shared state, Recharts, custom hooks | `[ 🔒 Locked ]` |
+| **09** | **Full-Stack Blog Platform** | React UI connected end-to-end with custom Express REST API | `[ 🔒 Locked ]` |
+| **10** | 🏆 **Flagship 1: Workflow Tool** | PostgreSQL, Auth/RBAC, file uploads, CI/CD, live deploy | `[ 🔒 Locked ]` |
+| **11** | 🏆 **Flagship 2: Domain System** | Complex business logic, background queues, reporting | `[ 🔒 Locked ]` |
+| **12** | 🏆 **Flagship 3: Scale & Real-Time**| WebSockets, query indexing (`p95 < 60ms`), full test suite | `[ 🔒 Locked ]` |
+
+<details>
+<summary><b>📋 Click to View My Pull Request & Code Review Checklist (Applied to Every Repo)</b></summary>
+<br>
+
+- [ ] **No Blind AI Code:** Can I cover the screen and rewrite every function from scratch?
+- [ ] **Formatting & Linting:** Did `Prettier` format on save and did `ESLint` pass with 0 warnings?
+- [ ] **Semantic & Clean Naming:** Are variables and functions named after *what they do*, not single letters?
+- [ ] **Error & Loading States:** What happens if the network fails, the API returns `500`, or input is empty?
+- [ ] **Security Check:** Are `.env` secrets and `node_modules` inside `.gitignore`? Are all inputs validated with Zod?
+- [ ] **Meaningful Commits:** Are commit messages imperative and descriptive (e.g., `Add date filter to expense list`)?
+
+</details>
+
+---
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Bullseye.png" width="30" height="30" /> Tech Stack & Tooling
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,tailwind,js,ts,react,vite,nodejs,express,postgres,prisma,git,github,docker,githubactions,aws,linux,vscode,postman,vitest&perline=10" alt="Tech Stack Icons" />
+</div>
+
+---
+
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="30" height="30" /> Connect With Me
+
+<div align="center">
+  <a href="https://github.com/Anujbarwal">
+    <img src="https://img.shields.io/badge/GitHub-@Anujbarwal-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="https://github.com/Anujbarwal?tab=repositories">
+    <img src="https://img.shields.io/badge/Explore-My%20Repositories-0284c7?style=for-the-badge&logo=git&logoColor=white" alt="Repositories" />
+  </a>
+</div>
+
+<!-- 3D ANIMATED WAVING FOOTER -->
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,19,24&height=110&section=footer" width="100%" alt="Footer" />
+</div>
