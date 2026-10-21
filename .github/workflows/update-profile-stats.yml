@@ -1,0 +1,101 @@
+name: Update profile stats
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Refresh public GitHub counts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import datetime
+          import json
+          import os
+          import urllib.parse
+          import urllib.request
+          from pathlib import Path
+
+          api_root = "https://api.github.com"
+          headers = {
+              "Accept": "application/vnd.github+json",
+              "Authorization": f"Bearer {os.environ['GH_TOKEN']}",
+              "X-GitHub-Api-Version": "2022-11-28",
+          }
+
+          def get_json(path):
+              request = urllib.request.Request(f"{api_root}/{path}", headers=headers)
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  return json.load(response)
+
+          profile = get_json("users/Anujbarwal")
+          commits_query = urllib.parse.urlencode(
+              {"q": "author:Anujbarwal", "per_page": "1"}
+          )
+          merged_pr_query = urllib.parse.urlencode(
+              {
+                  "q": "author:Anujbarwal type:pr is:merged",
+                  "per_page": "1",
+              }
+          )
+          public_commits = get_json(f"search/commits?{commits_query}")["total_count"]
+          merged_prs = get_json(f"search/issues?{merged_pr_query}")["total_count"]
+          updated = datetime.datetime.now(datetime.timezone.utc).strftime(
+              "%Y-%m-%d %H:%M UTC"
+          )
+
+          section = f"""<!-- LIVE_GITHUB_COUNTS:START -->
+          <table>
+            <tr>
+              <td width="50%" align="center" valign="top">
+                <strong>GitHub profile</strong><br>
+                Public repositories: <strong>{profile["public_repos"]}</strong><br>
+                Followers: <strong>{profile["followers"]}</strong>
+              </td>
+              <td width="50%" align="center" valign="top">
+                <strong>Building in public</strong><br>
+                Public commits: <strong>{public_commits}</strong><br>
+                Merged pull requests: <strong>{merged_prs}</strong>
+              </td>
+            </tr>
+          </table>
+          <p align="center"><sub>Public GitHub counts · Updated {updated} · refreshes automatically every 6 hours</sub></p>
+          <!-- LIVE_GITHUB_COUNTS:END -->"""
+
+          readme = Path("README.md")
+          content = readme.read_text(encoding="utf-8")
+          start = "<!-- LIVE_GITHUB_COUNTS:START -->"
+          end = "<!-- LIVE_GITHUB_COUNTS:END -->"
+          if content.count(start) != 1 or content.count(end) != 1:
+              raise SystemExit("Expected exactly one live GitHub counts section.")
+          before, remainder = content.split(start, 1)
+          _, after = remainder.split(end, 1)
+          readme.write_text(f"{before}{section}{after}", encoding="utf-8")
+          PY
+
+      - name: Commit updated counts
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "GitHub counts have not changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update live GitHub profile counts"
+          git push
