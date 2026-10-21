@@ -222,7 +222,10 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   transform: translateZ(20px);
   animation: emoji-float 5s ease-in-out infinite;
   transform-style: preserve-3d;
+  transition: background .7s ease, box-shadow .7s ease, border-color .7s ease;
 }
+.hero-art[data-scene="1"] .emoji-orb { border-color: rgba(193, 166, 255, .58); background: radial-gradient(circle at 32% 22%, rgba(255, 255, 255, .4), transparent 21%), radial-gradient(circle at 66% 77%, rgba(126, 94, 207, .45), transparent 35%), linear-gradient(145deg, rgba(169, 143, 255, .3), rgba(85, 135, 214, .24) 56%, rgba(84, 218, 203, .2)); box-shadow: inset 0 0 31px rgba(226, 209, 255, .18), inset -17px -20px 32px rgba(12, 20, 55, .23), 0 27px 70px rgba(130, 110, 224, .24), 0 0 36px rgba(169, 143, 255, .22); }
+.hero-art[data-scene="2"] .emoji-orb { border-color: rgba(255, 189, 139, .55); background: radial-gradient(circle at 32% 22%, rgba(255, 255, 255, .4), transparent 21%), radial-gradient(circle at 66% 77%, rgba(225, 119, 93, .36), transparent 35%), linear-gradient(145deg, rgba(255, 189, 139, .28), rgba(129, 114, 203, .22) 56%, rgba(131, 240, 215, .2)); box-shadow: inset 0 0 31px rgba(255, 234, 209, .17), inset -17px -20px 32px rgba(12, 20, 55, .23), 0 27px 70px rgba(221, 139, 105, .22), 0 0 36px rgba(255, 189, 139, .2); }
 .emoji-orb::before, .emoji-orb::after {
   position: absolute;
   inset: -8px;
@@ -245,8 +248,14 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .spark-one { top: 50px; right: 15px; animation: sparkle 2.6s ease-in-out infinite; }
 .spark-two { bottom: 59px; left: 20px; color: var(--orange); animation: sparkle 2.6s ease-in-out -1.2s infinite; }
 .float-card { position: absolute; z-index: 3; padding: 8px 11px; border: 1px solid rgba(184, 210, 239, .15); border-radius: 7px; background: rgba(15, 27, 44, .8); box-shadow: 0 14px 34px rgba(0, 0, 0, .18); color: var(--muted); font-family: var(--mono); font-size: 10px; backdrop-filter: blur(10px); }
-.float-card-code { top: 69px; left: 0; transform: rotate(-5deg); }
-.float-card-code > span:first-child { margin-right: 9px; color: var(--blue); }
+.float-card-code { top: 69px; left: 0; display: flex; max-width: min(260px, 80%); align-items: center; gap: 5px; transform: rotate(-5deg); transition: border-color .3s ease, background .3s ease; }
+.quote-index { flex: 0 0 auto; margin-right: 3px; color: var(--blue); }
+.quote-mark { color: var(--mint); }
+.float-card-code #hero-coding-quote { color: var(--text); }
+.hero-art.is-changing .float-card-code { animation: quote-arrive .55s ease both; }
+.hero-art.is-changing .emoji-face { animation: coder-arrive .55s cubic-bezier(.2, .8, .2, 1) both; }
+.hero-art[data-scene="1"] .art-glow { filter: hue-rotate(45deg) blur(8px); }
+.hero-art[data-scene="2"] .art-glow { filter: hue-rotate(120deg) blur(8px); }
 .cursor { color: var(--mint); animation: blink .9s steps(2, start) infinite; }
 .float-card-ship { right: 0; bottom: 76px; transform: rotate(4deg); }
 .ship-check { margin-right: 6px; color: var(--mint); }
@@ -402,6 +411,8 @@ h2 { margin-bottom: 0; font-family: var(--display); font-size: clamp(31px, 4vw, 
 @keyframes glow-breathe { from { opacity: .65; transform: scale(.92); } to { opacity: 1; transform: scale(1.08); } }
 @keyframes orbit-pulse { 0%, 100% { opacity: .45; } 50% { opacity: .95; } }
 @keyframes sparkle { 0%, 100% { opacity: .38; transform: scale(.8) rotate(0); } 50% { opacity: 1; transform: scale(1.15) rotate(25deg); } }
+@keyframes quote-arrive { 0% { opacity: .3; transform: translateY(7px) rotate(-5deg); } 100% { opacity: 1; transform: translateY(0) rotate(-5deg); } }
+@keyframes coder-arrive { 0% { opacity: .35; transform: translateZ(30px) rotate(-22deg) scale(.72); } 100% { opacity: 1; transform: translateZ(30px) rotate(-8deg) scale(1); } }
 @keyframes blink { to { visibility: hidden; } }
 @keyframes rocket-hover { 0%, 100% { transform: translateY(0) rotate(-7deg); } 50% { transform: translateY(-11px) rotate(2deg); } }
 

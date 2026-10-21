@@ -200,6 +200,33 @@ projectSearch.addEventListener("input", filterProjects);
 
 const heroArt = document.querySelector(".hero-art");
 const emojiScene = document.querySelector(".emoji-scene");
+const heroQuote = document.querySelector("#hero-coding-quote");
+const heroQuoteIndex = document.querySelector("#hero-quote-index");
+const heroCoder = document.querySelector("#hero-coder");
+const heroSceneCaption = document.querySelector("#hero-scene-caption");
+const codingScenes = [
+  { quote: "Build small. Ship often.", coder: "👨‍💻", caption: "BUILDER MODE" },
+  { quote: "Every bug leaves a clue.", coder: "👩‍💻", caption: "DEBUG MODE" },
+  { quote: "Make it work. Make it clear.", coder: "🤖", caption: "REFACTOR MODE" },
+  { quote: "Consistency compiles.", coder: "🧑‍💻", caption: "FOCUS MODE" },
+  { quote: "Learn it. Build it. Explain it.", coder: "🚀", caption: "SHIP MODE" },
+];
+let activeCodingScene = 0;
+
+function showNextCodingScene() {
+  activeCodingScene = (activeCodingScene + 1) % codingScenes.length;
+  const scene = codingScenes[activeCodingScene];
+
+  heroQuote.textContent = scene.quote;
+  heroQuoteIndex.textContent = String(activeCodingScene + 1).padStart(2, "0");
+  heroCoder.textContent = scene.coder;
+  heroSceneCaption.textContent = `SCENE ${String(activeCodingScene + 1).padStart(2, "0")} · ${scene.caption}`;
+  heroArt.dataset.scene = String(activeCodingScene % 3);
+  heroArt.classList.remove("is-changing");
+  void heroArt.offsetWidth;
+  heroArt.classList.add("is-changing");
+}
+
 heroArt.addEventListener("pointermove", (event) => {
   if (!event.isPrimary || event.pointerType === "touch") return;
   const bounds = heroArt.getBoundingClientRect();
@@ -213,6 +240,7 @@ heroArt.addEventListener("pointerleave", () => {
   emojiScene.style.setProperty("--pointer-y", "0deg");
 });
 
+window.setInterval(showNextCodingScene, 5_000);
 updateProgress();
 filterProjects();
 updateLocalTime();
