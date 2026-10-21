@@ -10,8 +10,8 @@
     <meta property="og:type" content="website">
     <title>Anuj's Full-Stack Roadmap</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=hero-rotation-1">
-    <script src="app.js?v=hero-rotation-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=hero-click-1">
+    <script src="app.js?v=hero-click-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -45,12 +45,14 @@
           <div class="orbit orbit-two" aria-hidden="true"></div>
           <div class="float-card float-card-code"><span class="quote-index" id="hero-quote-index">01</span><span class="quote-mark" aria-hidden="true">“</span><span id="hero-coding-quote">Build small. Ship often.</span><span class="quote-mark" aria-hidden="true">”</span></div>
           <div class="float-card float-card-ship" aria-hidden="true"><span class="ship-check">✓</span> learn · build · repeat</div>
-          <div class="emoji-scene" aria-hidden="true">
-            <span class="emoji-shadow"></span>
-            <span class="emoji-orb"><span class="emoji-face" id="hero-coder">👨‍💻</span></span>
-            <span class="emoji-spark spark-one">✦</span>
-            <span class="emoji-spark spark-two">✧</span>
-          </div>
+          <button class="scene-trigger" id="scene-trigger" type="button" aria-label="Show the next coding scene" title="Click to change the character and quote">
+            <span class="emoji-scene" aria-hidden="true">
+              <span class="emoji-shadow"></span>
+              <span class="emoji-orb"><span class="emoji-face" id="hero-coder">👨‍💻</span></span>
+              <span class="emoji-spark spark-one">✦</span>
+              <span class="emoji-spark spark-two">✧</span>
+            </span>
+          </button>
           <p class="art-caption" id="hero-scene-caption">SCENE&nbsp; 01 &nbsp;·&nbsp; BUILDER MODE</p>
         </div>
         <div class="hero-scroll" aria-hidden="true"><span></span> SCROLL TO EXPLORE</div>
