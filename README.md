@@ -1,6 +1,6 @@
-<!-- 3D ANIMATED WAVING HEADER (100% SVG - NEVER BREAKS ON GITHUB) -->
+<!-- Self-hosted animated SVG header -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,19,24&height=260&section=header&text=Anuj%20Barwal&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Developer%20in%20Progress%20%7C%20New%20Delhi,%20India%20%F0%9F%87%AE%F0%9F%87%B3&descAlignY=58&descSize=20" width="100%" alt="Header" />
+  <img src="./assets/profile-header.svg" width="100%" alt="Anuj Barwal — Full-Stack Developer in Progress, New Delhi, India" />
 </div>
 
 <!-- LIVE TYPING SVG ANIMATION -->
