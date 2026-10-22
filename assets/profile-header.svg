@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-labelledby="title description">
+  <title id="title">Anuj Barwal</title>
+  <desc id="description">Full-Stack Developer in Progress, New Delhi, India</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="55%" stop-color="#155e75" />
+      <stop offset="100%" stop-color="#0e7490" />
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#67e8f9" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#a5f3fc" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="260" fill="url(#background)" />
+  <path fill="url(#wave)" opacity=".28" d="M0 190 C150 155 280 220 430 190 C580 160 700 155 850 185 C1000 215 1100 205 1200 175 L1200 260 L0 260 Z">
+    <animate attributeName="d" dur="9s" repeatCount="indefinite" values="M0 190 C150 155 280 220 430 190 C580 160 700 155 850 185 C1000 215 1100 205 1200 175 L1200 260 L0 260 Z;M0 175 C150 205 280 160 430 185 C580 210 700 215 850 180 C1000 150 1100 165 1200 195 L1200 260 L0 260 Z;M0 190 C150 155 280 220 430 190 C580 160 700 155 850 185 C1000 215 1100 205 1200 175 L1200 260 L0 260 Z" />
+  </path>
+  <path fill="#cffafe" opacity=".22" d="M0 215 C170 195 250 235 420 215 C590 195 690 180 860 205 C1030 230 1100 220 1200 205 L1200 260 L0 260 Z">
+    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="M0 215 C170 195 250 235 420 215 C590 195 690 180 860 205 C1030 230 1100 220 1200 205 L1200 260 L0 260 Z;M0 200 C170 220 250 195 420 205 C590 215 690 235 860 210 C1030 185 1100 195 1200 220 L1200 260 L0 260 Z;M0 215 C170 195 250 235 420 215 C590 195 690 180 860 205 C1030 230 1100 220 1200 205 L1200 260 L0 260 Z" />
+  </path>
+  <text x="600" y="112" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" text-anchor="middle">Anuj Barwal</text>
+  <text x="600" y="158" fill="#e0f2fe" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="500" text-anchor="middle">Full-Stack Developer in Progress | New Delhi, India</text>
+</svg>
