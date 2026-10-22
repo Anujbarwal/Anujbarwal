@@ -74,7 +74,7 @@ jobs:
               </td>
             </tr>
           </table>
-          <p align="center"><sub>Public GitHub counts · Updated {updated} · refreshes automatically every 6 hours</sub></p>
+          <p align="center"><sub>Public GitHub counts · Updated {updated} · scheduled to refresh every 6 hours</sub></p>
           <!-- LIVE_GITHUB_COUNTS:END -->"""
 
           readme = Path("README.md")

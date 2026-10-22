@@ -80,12 +80,12 @@
     </td>
   </tr>
 </table>
-<p align="center"><sub>Public GitHub counts · Updated 2026-10-22 03:36 UTC · refreshes automatically every 6 hours</sub></p>
+<p align="center"><sub>Public GitHub counts · Updated 2026-10-22 03:36 UTC · scheduled to refresh every 6 hours</sub></p>
 <!-- LIVE_GITHUB_COUNTS:END -->
 
 ---
 
-### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="30" height="30" /> Live Roadmap & Code Review Audit Tracker
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="30" height="30" /> Full-Stack Roadmap & Code Review Gates
 
 | Phase | Timeline | Stack & Focus | Progress | Self-Test & Code Review Gate |
 | :--- | :--- | :--- | :--- | :--- |
@@ -99,6 +99,8 @@
 | **08** | Month 12 | **Auth, OWASP Security & Testing** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | bcrypt, JWT/Sessions, RBAC + Vitest, Supertest, Playwright |
 | **09** | Months 13–14 | **Docker, CI/CD & AWS Cloud** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | GitHub Actions linter/test pipeline + AWS EC2/RDS/HTTPS |
 | **10** | Months 13–17 | **3 Flagship Portfolio Systems** | ![Queued](https://img.shields.io/badge/Status-Queued-64748b?style=flat-square) | Live URL, demo login, trade-offs doc & 3-min walkthrough |
+
+Phase status labels show my self-reported progress and are not automatically synced with GitHub activity.
 
 The [live interactive roadmap website](https://anujbarwal.github.io/Full-Stack-From-Zero-Roadmap/) expands these milestones with a searchable project ladder, self-tests, curated learning resources, a browser-saved progress tracker, a live countdown, animated coding scenes, and computing-history quotes.
 
@@ -144,11 +146,11 @@ The links below open each original PR, including its review conversation, file c
 
 ---
 
-### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="30" height="30" /> Live Repository & Code Review Board
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="30" height="30" /> Project & Code Review Board
 
-> *As I push projects to [`github.com/Anujbarwal`](https://github.com/Anujbarwal?tab=repositories), the live badges below automatically track my latest commits and repository state.*
+> *This manually maintained project ladder lists planned deliverables; its status labels are not synced with repository activity.*
 
-| # | Project Deliverable | Core Engineering Concept | Live Commit & Review Status |
+| # | Project Deliverable | Core Engineering Concept | Roadmap Status |
 | :-: | :--- | :--- | :--- |
 | **01** | **Personal Profile Page** | Semantic HTML5, accessibility, relative paths | `[ ⏳ Building ]` |
 | **02** | **Responsive Multi-Page Site** | CSS Box Model, Flexbox, Grid, mobile-first media queries | `[ 🔒 Locked ]` |
