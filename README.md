@@ -10,11 +10,8 @@
   </a>
 </div>
 
-<!-- LIVE DYNAMIC GITHUB TRACKING BADGES -->
+<!-- GitHub profile badges -->
 <div align="center">
-  <a href="https://github.com/Anujbarwal">
-    <img src="https://komarev.com/ghpvc/?username=Anujbarwal&label=Profile%20Views&color=0284c7&style=for-the-badge" alt="Profile Views" />
-  </a>
   <a href="https://github.com/Anujbarwal?tab=followers">
     <img src="https://img.shields.io/github/followers/Anujbarwal?label=Followers&style=for-the-badge&color=2563eb&logo=github" alt="Followers" />
   </a>
@@ -23,6 +20,8 @@
   </a>
   <img src="https://img.shields.io/badge/Focus-Full--Stack%20%2B%20DSA-10b981?style=for-the-badge&logo=target&logoColor=white" alt="Focus" />
 </div>
+
+<p align="center"><sub>Profile view counts aren't provided by GitHub's public API, so no view counter is shown.</sub></p>
 
 <p align="center">
   <a href="https://anujbarwal.github.io/Full-Stack-From-Zero-Roadmap/"><strong>🧭 Open the live Full-Stack From Zero roadmap website →</strong></a>
