@@ -70,7 +70,7 @@
     <td width="50%" align="center" valign="top">
       <strong>GitHub profile</strong><br>
       Public repositories: <strong>2</strong><br>
-      Followers: <strong>0</strong>
+      Followers: <strong>1</strong>
     </td>
     <td width="50%" align="center" valign="top">
       <strong>Building in public</strong><br>
@@ -79,7 +79,7 @@
     </td>
   </tr>
 </table>
-<p align="center"><sub>Public GitHub counts · Updated 2026-11-02 06:17 UTC · scheduled to refresh every 6 hours</sub></p>
+<p align="center"><sub>Public GitHub counts · Updated 2026-11-02 21:44 UTC · scheduled to refresh every 6 hours</sub></p>
 <!-- LIVE_GITHUB_COUNTS:END -->
 
 ---
